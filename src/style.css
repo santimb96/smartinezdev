@@ -4,9 +4,10 @@
 
 :root {
   --main-color: rgb(248, 248, 247);
-  --divider: rgb(140, 255, 130);
-	--header-letter-color: #00744f;
-	--paragraph-letter-color: #0fa374;
+  --divider: #80AF81;
+	--header-letter-color: #1A5319;
+	--paragraph-letter-color: #508D4E;
+	--current-link: #44a168;
 }
 
 * {
@@ -26,14 +27,22 @@ body {
 	margin: 0;
 	min-height: 100dvh;
 	background: rgb(248, 248, 247);
+	color: var(--paragraph-letter-color);
 	/* background: linear-gradient(0deg, rgba(255,255,254,1) 0%, rgb(140, 255, 130) 100%);  */
 }
 h1, h2, h3, h4, h5, h6 {
 	color: var(--header-letter-color);
 	text-wrap: balance;
 }
+a {
+	color: var(--header-letter-color);
+	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+	&:hover {
+		color: var(--current-link);
+	}
+}
 p {
-	color: var(--paragraph-letter-color);
 	text-wrap: pretty;
 }
 .divider {
