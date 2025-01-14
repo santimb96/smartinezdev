@@ -7,11 +7,11 @@ const Navbar = () => {
   return (
     <header className='w-full flex flex-row justify-center'>
       <nav className='fixed top-0 z-50 flex flex-row justify-center gap-4 md:gap-5 md:justify-center py-2.5 px-5'>
-        {LINKS.map(({ link, title, iconComponent }, index) => {
+        {LINKS.map(({ link, title, IconComponent }, index) => {
           return (
             <a key={title} href={index !== LINKS.length - 1 ? link : 'mailto:santiagomartinezbota@gmail.com'} onClick={() => setSection(link)} className={`${link === section ? 'underlinedLink' : ''} navButton flex flex-col justify-center items-center md:flex md:flex-row md:justify-center md:items-center md:gap-2.5`}>
               <span className='order-2 md:order-2 pt-[2px]'>{title}</span>
-              {iconComponent && <div className='order-1 md:order-1'>{iconComponent}</div>}
+              {IconComponent && <div className='order-1 md:order-1'><IconComponent className='lucideIcon' strokeWidth={1.5} /></div>}
             </a>
           )
         })}
