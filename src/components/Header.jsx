@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Linkedin, Mail } from 'lucide-preact'
-import linkedinPic from '../assets/img/linkedinPic.webp'
+import linkedinPic from '../../public/img/linkedinPic.webp'
 
 const Header = () => {
   return (
