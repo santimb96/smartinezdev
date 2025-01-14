@@ -1,6 +1,16 @@
 import { BriefcaseBusiness, FolderGit2, UserRoundCheck, Mail } from 'lucide-preact'
 
-const LINKS = [{ link: '#aboutme', title: 'Sobre mí', iconComponent: <UserRoundCheck className='lucideIcon' strokeWidth={1.5} /> }, { link: '#experience', title: 'Experiencia', iconComponent: <BriefcaseBusiness className='lucideIcon' strokeWidth={1.5} /> }, { link: '#projects', title: 'Proyectos', iconComponent: <FolderGit2 className='lucideIcon' strokeWidth={1.5} /> }, { link: '#contact', title: 'Contacto', iconComponent: <Mail className='lucideIcon' strokeWidth={1.5} /> }]
+const UserIcon = <UserRoundCheck className='lucideIcon' strokeWidth={1.5} />
+const BriefcaseIcon = <BriefcaseBusiness className='lucideIcon' strokeWidth={1.5} />
+const FolderIcon = <FolderGit2 className='lucideIcon' strokeWidth={1.5} />
+const MailIcon = <Mail className='lucideIcon' strokeWidth={1.5} />
+
+const LINKS = [
+  { link: '#aboutme', title: 'Sobre mí', iconComponent: UserIcon },
+  { link: '#experience', title: 'Experiencia', iconComponent: BriefcaseIcon },
+  { link: '#projects', title: 'Proyectos', iconComponent: FolderIcon },
+  { link: '#contact', title: 'Contacto', iconComponent: MailIcon }
+]
 
 const EXPERIENCE = [
   {
