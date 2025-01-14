@@ -1,6 +1,6 @@
 const Divider = () => {
   return (
-    <hr className='w-full my-5 divider' />
+    <hr className='w-full my-5' />
   )
 }
 
