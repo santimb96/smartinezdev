@@ -30,14 +30,14 @@ const Project = ({ name, area, date, img, deployment, repository, description, s
       {deployment === null && repository === null
         ? (
           <div className='flex flex-row items-start gap-2.5'>
-            <MessageCircleWarning className='min-w-6' strokeWidth={2} />
+            <span className='min-w-6 opacity-90'><MessageCircleWarning strokeWidth={2} /></span>
             <p className='opacity-90 font-semibold italic'>Este proyecto es privado, por lo que el código no está disponible en estos momentos</p>
           </div>
           )
         : (
           <div className='flex flex-row gap-2.5 flex-wrap'>
-            {deployment !== null && <a href={deployment} target='_blank' rel='noreferrer' className='buttonLink'><Globe className='lucideIcon' strokeWidth={1.5} /><span>Sitio web</span></a>}
-            {repository !== null && <a href={repository} target='_blank' rel='noreferrer' className='buttonLink'><Github className='lucideIcon' strokeWidth={1.5} /><span>Respositorio</span></a>}
+            {deployment !== null && <a href={deployment} target='_blank' rel='noreferrer' className='buttonLink'><span className='lucideIcon'><Globe strokeWidth={1.5} /></span><span>Sitio web</span></a>}
+            {repository !== null && <a href={repository} target='_blank' rel='noreferrer' className='buttonLink'><span className='lucideIcon'><Github strokeWidth={1.5} /></span><span>Respositorio</span></a>}
           </div>
           )}
       <h4>Stack utilizado</h4>
