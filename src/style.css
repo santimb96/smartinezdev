@@ -17,6 +17,7 @@
 :root {
   --primary: #F0F4F1;
 	--secondary: #335f33;
+	--detail: #15A085;
 	--text: #383B39;
 	--header-footer: #9DA69F;
 }
@@ -76,6 +77,11 @@ hr {
 	min-height: 2px;
 	background: linear-gradient(90deg,var(--primary), var(--secondary), var(--primary));
 }
+.footerDivider {
+	border-top-width: 0px;
+	min-height: 1px !important;
+	background: linear-gradient(90deg,transparent , var(--primary), transparent) !important;
+}
 .vertDivider {
 	width: 1.5px;
 	height: 100%;
@@ -125,9 +131,10 @@ p {
 }
 /* SPECIAL CLASSES */
 #scrollToTop {
-	background-color: var(--secondary);
+	background-color: var(--detail);
 	color: var(--primary);
 	border-radius: 100px;
+	border: 1px solid var(--primary);
 	padding: 10px;
 	position: fixed;
 	bottom: 20px;
@@ -228,6 +235,9 @@ p {
 	object-fit: cover;
 }
 @media (min-width: 768px) {
+	.underlinedLink {
+		border-bottom: 1px solid var(--secondary);
+	}
 	.scrollToTopActive:hover {
 		scale: 1.25;
 	}
@@ -239,41 +249,20 @@ p {
 	}
 	.buttonLink {
 		font-size: 16px;
-		background: var(--primary);
+		background-color: var(--primary);
 		transition: all .25 ease-in-out;
 		cursor: pointer;
 		color: var(--secondary);
-		/* background: linear-gradient(to right, var(--secondary) 50%, transparent 50%);
-		background-size: 205% 100%;
-		background-position: right bottom;
-		transition: all 0.5s ease;
-	
-		&:hover {
-			color: var(--primary);
-			cursor: pointer;
-			background-position: left bottom;
-		} */
 		 &:hover {
-			background: var(--secondary);
+			background-color: var(--detail);
 			color: var(--primary);
 		 }
 	}
 	.navButton {
 		font-size: 16px;
 		padding: 2.5px 10px 2.5px 10px;
-		background-image: linear-gradient(to right, var(--secondary) 50%, transparent 50%);
-		background-repeat: no-repeat;
-		background-position: right bottom;
-		background-size: 205% 1px;
-		transition: all 0.5s ease;
-		
-		&:hover {
-			color: var(--text);
-			cursor: pointer;
-			background-position: left bottom;
-		}
+		cursor: pointer;
 	}
-	
 }
 
 @media (min-width: 1024px) {

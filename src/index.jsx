@@ -22,6 +22,7 @@ export function App () {
         <Projects />
       </Layout>
       <Footer />
+      <ScrollToTop />
     </>
   )
 }
