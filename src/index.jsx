@@ -12,7 +12,7 @@ import './style.css'
 
 export function App () {
   return (
-    <main className='relative'>
+    <>
       <Layout>
         <Navbar />
         <Header />
@@ -22,8 +22,7 @@ export function App () {
         <Projects />
       </Layout>
       <Footer />
-      <ScrollToTop />
-    </main>
+    </>
   )
 }
 

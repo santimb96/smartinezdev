@@ -131,10 +131,21 @@ p {
 	padding: 10px;
 	position: fixed;
 	bottom: 20px;
-	right: 20px;
+	right: calc((100vw - 60vw) / 2 + 20px); /* For large screens */
 	cursor: pointer;
 	opacity: 0;
 	transition: all 0.25s ease-in-out;
+}
+@media (max-width: 1024px) {
+	#scrollToTop {
+			right: calc((100vw - 75vw) / 2 + 20px); /* For medium screens */
+	}
+}
+
+@media (max-width: 768px) {
+	#scrollToTop {
+			right: 20px; /* For mobile screens */
+	}
 }
 .scrollToTopActive {
 	opacity: 1 !important;
