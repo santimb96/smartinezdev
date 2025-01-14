@@ -11,7 +11,7 @@ const Navbar = () => {
           return (
             <a key={title} href={index !== LINKS.length - 1 ? link : 'mailto:santiagomartinezbota@gmail.com'} onClick={() => setSection(link)} className={`${link === section ? 'underlinedLink' : ''} navButton flex flex-col justify-center items-center md:flex md:flex-row md:justify-center md:items-center md:gap-2.5`}>
               <span className='order-2 md:order-2 pt-[2px]'>{title}</span>
-              {IconComponent && <div className='order-1 md:order-1'><IconComponent className='lucideIcon' strokeWidth={1.5} /></div>}
+              {IconComponent && <span className='order-1 lucideIcon'><IconComponent strokeWidth={1.5} /></span>}
             </a>
           )
         })}
