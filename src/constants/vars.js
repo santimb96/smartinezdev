@@ -25,6 +25,16 @@ const EXPERIENCE = [
 
 const PROJECTS = [
   {
+    name: 'PFisicMario (preparador físico de judo)',
+    area: 'Full-stack',
+    date: '2025-06-11',
+    img: '/img/projects/dummy.webp',
+    deployment: 'https://pfisicmario.vercel.app/',
+    repository: 'https://github.com/santimb96/pfisicmario',
+    description: 'Web para un entrenador de judo el cual quiere gestionar usuarios, planes de entrenamiento y seminarios entre otros. La web está haciéndose en NextJS para la futura escalabilidad que incluirá gestión de usuarios, plataforma de pago y planes haciendo uso de entorno backend + base de datos.',
+    stack: ['NextJS', 'React', 'Tailwind CSS', 'CSS', 'View transition']
+  },
+  {
     name: 'Docmark',
     area: 'Full-stack',
     date: '2025-04-11',
