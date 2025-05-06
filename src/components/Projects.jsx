@@ -26,7 +26,7 @@ const Project = ({ name, area, date, img, deployment, repository, description, s
         <h4>{area}</h4>
         <h5 className='opacity-80'><span>Estado: </span>{currentDate > projectDate ? <span>finalizado en {getYear} ✅</span> : <span className='text-green-700'>en desarrollo 💻</span>}</h5>
       </div>
-      <p>{description}</p>
+      <p dangerouslySetInnerHTML={{ __html: description }} />
       {deployment === null && repository === null
         ? (
           <div className='flex flex-row items-start gap-2.5'>

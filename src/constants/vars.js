@@ -25,13 +25,13 @@ const EXPERIENCE = [
 
 const PROJECTS = [
   {
-    name: 'PFisicMario (preparador físico de judo)',
+    name: 'Ressò - Centre d\'entrenament',
     area: 'Full-stack',
     date: '2025-06-11',
-    img: '/img/projects/dummy.webp',
-    deployment: 'https://pfisicmario.vercel.app/',
-    repository: 'https://github.com/santimb96/pfisicmario',
-    description: 'Web para un entrenador de judo el cual quiere gestionar usuarios, planes de entrenamiento y seminarios entre otros. La web está haciéndose en NextJS para la futura escalabilidad que incluirá gestión de usuarios, plataforma de pago y planes haciendo uso de entorno backend + base de datos.',
+    img: '/img/projects/resso-centre-entrenament.webp',
+    deployment: 'https://ressocentreentrenament.vercel.app/',
+    repository: 'https://github.com/santimb96/ressoo-centre-entrenament',
+    description: 'Web para el centro <i>Ressò - Centre d\'entrenament</i>, situado en Marratxí (Palma de Mallorca). Ésta ofrece servicios de gimnasio, entrenos personales, seminarios, etc. El proyecto está desarrollado en NextJS para posible escalado y migración de datos de la aplicación.',
     stack: ['NextJS', 'React', 'Tailwind CSS', 'CSS', 'View transition']
   },
   {
@@ -41,7 +41,7 @@ const PROJECTS = [
     img: '/img/projects/dummy.webp',
     deployment: null,
     repository: null,
-    description: 'Aplicación para Atalis Funding la cual gestiona documentos provenientes de Horizon Europe, permitiendo a los usuarios subrayarlos, organizar su contenido jerárquicamente y compartir los cambios con los demás usuarios dados de alta.',
+    description: 'Aplicación para <i>Atalis Funding</i> la cual gestiona documentos provenientes de <i>Horizon Europe</i>, permitiendo a los usuarios subrayarlos, organizar su contenido jerárquicamente y compartir los cambios con los demás usuarios dados de alta.',
     stack: ['React', 'Ruby on Rails', 'Python', 'Figma', 'Tailwind CSS', 'Zustand', 'CSS', 'API TreeWalker', 'PostgreSQL', 'JWT', 'API REST']
   },
   {
@@ -51,7 +51,7 @@ const PROJECTS = [
     img: '/img/projects/tmdbApp.webp',
     deployment: 'https://tmdb-movie-app-santimb96.vercel.app/',
     repository: 'https://github.com/santimb96/tmdb-movie-app',
-    description: 'Prueba técnica para la empresa Atalis Funding la cual permite buscar series y películas, resultados paginados, gestión de favoritos e información detallada de lo buscado. Incluye una simulación de autenticación en el navegador (localStorage), y el consumo de datos mediante API REST.',
+    description: 'Prueba técnica para la empresa <i>Atalis Funding</i> la cual permite buscar series y películas, resultados paginados, gestión de favoritos e información detallada de lo buscado. Incluye una simulación de autenticación en el navegador (localStorage), y el consumo de datos mediante API REST.',
     stack: ['React', 'CSS', 'API REST', 'localStorage']
   },
   {
@@ -61,7 +61,7 @@ const PROJECTS = [
     img: '/img/projects/sx3Scrapping.webp',
     deployment: null,
     repository: 'https://github.com/santimb96/sx3_content_scrapping',
-    description: 'Obtención de contenido multimedia (series y películas), mediante scrapping de datos, leyendo el DOM de la web principal y analizando la API del grupo TV3 para obtener los ficheros. Una vez procesados, estos se guardan en almacenamiento local y se genera un archivo de registro local.',
+    description: 'Obtención de contenido multimedia (series y películas), mediante scrapping de datos, leyendo el DOM de la web principal y analizando la API del grupo <i>TV3</i> para obtener los ficheros. Una vez procesados, estos se guardan en almacenamiento local y se genera un archivo de registro local.',
     stack: ['Python', 'Beautiful Soup']
   },
   {
@@ -71,7 +71,7 @@ const PROJECTS = [
     img: '/img/projects/spoticlone.webp',
     deployment: 'https://music-project-wozzo-santimb96.vercel.app/list',
     repository: 'https://github.com/santimb96/music-project-wozzo',
-    description: 'Clon de Spotify que cuenta con listas de reproducción por temática, la cual incluye canciones reproducibles en toda la app mediante el reproductor multimedia hecho específicamente para esta aplicación. Las canciones se almacenan en AWS S3 y se procesan desde el backend, que provee a la app toda la data necesaria.',
+    description: 'Clon de <i>Spotify</i> que cuenta con listas de reproducción por temática, la cual incluye canciones reproducibles en toda la app mediante el reproductor multimedia hecho específicamente para esta aplicación. Las canciones se almacenan en AWS S3 y se procesan desde el backend, que provee a la app toda la data necesaria.',
     stack: ['React', 'Express', 'MongoDB', 'SCSS', 'MaterialUI', 'Mongoose', 'AWS', 'Multer', 'JWT']
   },
   {
@@ -81,7 +81,7 @@ const PROJECTS = [
     img: '/img/projects/pokeduel.webp',
     deployment: null,
     repository: 'https://github.com/santimb96/pokeDuel-client',
-    description: 'Proyecto de final de grado en el cual se diseña un videojuego basado en los combates Pokémon, obteniendo los datos de éstos desde un script y almacenándolos en la DB. El juego consiste en pasar rondas combatiendo contra pokémons aleatorios, incluyendo hándicap de tipos y una leader board.',
+    description: 'Proyecto de final de grado en el cual se diseña un videojuego basado en los combates <i>Pokémon</i>, obteniendo los datos de éstos desde un script y almacenándolos en la DB. El juego consiste en pasar rondas combatiendo contra pokémons aleatorios, incluyendo hándicap de tipos y una leader board.',
     stack: ['Angular', 'TypeScript', 'Express', 'MongoDB', 'SCSS', 'Mongoose', 'AWS', 'Multer', 'JWT']
   },
   {
