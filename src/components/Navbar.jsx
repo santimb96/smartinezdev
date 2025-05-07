@@ -1,9 +1,9 @@
 import { useState } from 'preact/hooks'
 import { LINKS } from '../constants/vars'
+import SwicthSchemes from './SwitchSchemes'
 
 const Navbar = () => {
   const [section, setSection] = useState('')
-  console.log(section)
   return (
     <header className='w-full flex flex-row justify-center'>
       <nav className='fixed top-0 z-50 flex flex-row justify-center gap-4 md:gap-5 md:justify-center py-2.5 px-5'>
@@ -15,6 +15,7 @@ const Navbar = () => {
             </a>
           )
         })}
+        <SwicthSchemes />
       </nav>
     </header>
   )

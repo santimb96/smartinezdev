@@ -2,7 +2,7 @@ import { LINKS } from '../constants/vars'
 
 const Footer = () => {
   return (
-    <footer className='min-h-min min-w-full bg-green-950 text-white/80 flex flex-col items-center justify-start py-5 px-2.5 text-[14px] text-ellipsis'>
+    <footer className='min-h-min min-w-full bg-[var(--detail)] text-white/80 flex flex-col items-center justify-start py-5 px-2.5 text-[14px] text-ellipsis'>
       <div className='md:w-[75vw] lg:w-[60vw] flex flex-row items-center justify-center gap-5 flex-wrap'>
         {LINKS.map(({ link, title }, index) => {
           return (

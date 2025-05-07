@@ -20,6 +20,29 @@
 	--detail: #15A085;
 	--text: #383B39;
 	--header-footer: #9DA69F;
+  --button-hover-bg: #15A085; /* Light mode button hover background */
+  --button-hover-text: #F0F4F1; /* Light mode button hover text color */
+	--development-badge: #07856c;
+}
+
+:root[data-theme="dark"] {
+  --primary: #383B39;
+  --secondary: #F0F4F1;
+  --detail: #15A085;
+  --text: #F0F4F1;
+  --header-footer: #9DA69F;
+  --button-hover-bg: #15A085; /* Dark mode button hover background */
+  --button-hover-text: #F0F4F1; /* Dark mode button hover text color */
+	--development-badge: #21e5be;
+}
+
+.developmentBadge {
+	color: var(--development-badge);
+}
+
+.buttonLink:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
 }
 /* GLOBAL STYLES AND CSS RESET */
 * {
@@ -254,10 +277,6 @@ p {
 		transition: all .25 ease-in-out;
 		cursor: pointer;
 		color: var(--secondary);
-		 &:hover {
-			background-color: var(--detail);
-			color: var(--primary);
-		 }
 	}
 	.navButton {
 		font-size: 16px;
@@ -276,4 +295,3 @@ p {
 		max-width: 250px;
 	}
 }
-
