@@ -4,8 +4,8 @@ import linkedinPic from '../../public/img/linkedinPic.webp'
 
 const Header = () => {
   return (
-    <section className='h-full scroll-m-20 mt-20 flex flex-col items-center gap-5 lg:flex-row lg:items-center lg:justify-center'>
-      <img src={linkedinPic} alt='Profile picture' className='profileImg' />
+    <section className='h-full scroll-m-20 mt-20 flex flex-col items-center gap-5 lg:flex-row lg:items-center lg:justify-center group'>
+      <img src={linkedinPic} alt='Profile picture' className='profileImg grayscale lg:group-hover:grayscale-0 duration-300 ease-in-out' />
       <div className='flex flex-col justify-between h-full'>
         <h1>Santi Martínez</h1>
         <p className='presentation'>Programador web con <strong>+3 años de experiencia</strong> como desarrollador <strong><i>front-end</i></strong>, así como en el <strong>diseño de interfaces y experiencia de usuario</strong>. Keep it simple 😉</p>

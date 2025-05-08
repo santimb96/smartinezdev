@@ -21,7 +21,7 @@ const TimeLine = ({ experience }) => {
       <div className='flex flex-col gap-2.5'>
         <div>
           <h3>{role}</h3>
-          <h5 className='flex flex-row gap-2.5 opacity-80'>
+          <h5 className='flex flex-row gap-2.5'>
             {company}
             <span>|</span>
             <time>{date}</time>
