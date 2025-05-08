@@ -20,11 +20,13 @@ const Project = ({ name, area, date, img, deployment, repository, description, s
   const currentDate = new Date()
   return (
     <article className='w-full max-w-sm md:max-w-full flex flex-col justify-start items-start gap-2.5 mb-10'>
-      <img src={img || 'src/assets/img/linkedinPic.webp'} alt={`${name} portada`} className='projectImg' />
+      <a href={deployment !== null && deployment} target='__blank' className='overflow-hidden'>
+        <img src={img || 'src/assets/img/linkedinPic.webp'} alt={`${name} portada`} className={`duration-150 ease-out ${deployment !== null && 'lg:hover:scale-105 cursor-pointer'}`} />
+      </a>
       <div className='w-full flex flex-col'>
         <h3>{name}</h3>
         <h4>{area}</h4>
-        <h5 className='opacity-80'><span>Estado: </span>{currentDate > projectDate ? <span>finalizado en {getYear} ✅</span> : <span className='developmentBadge'>en desarrollo 💻</span>}</h5>
+        <h4><span>Estado: </span>{currentDate > projectDate ? <span className='opacity-80'>finalizado en {getYear} ✅</span> : <span className='developmentBadge'>en desarrollo 💻</span>}</h4>
       </div>
       <p dangerouslySetInnerHTML={{ __html: description }} />
       {deployment === null && repository === null
