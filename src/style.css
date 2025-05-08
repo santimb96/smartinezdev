@@ -16,7 +16,7 @@
 /* VARIABLES */
 :root {
   --primary: #F0F4F1;
-	--secondary: #335f33;
+	--secondary: #383B39;
 	--detail: #15A085;
 	--text: #383B39;
 	--header-footer: #9DA69F;
@@ -207,15 +207,16 @@ p {
 		opacity: 0.80;
 	}
 }
+
 .available {
 	background: rgb(54, 161, 54);
 }
 .notAvailable {
 	background: rgb(163, 59, 59);
 }
+
 .buttonLink {
 	font-size: 16px;
-	background: var(--primary);
 	color: var(--secondary);
 	border: 1px solid var(--secondary);
 	padding: 5px 20px 5px 20px;
@@ -277,11 +278,6 @@ p {
 		transition: all .25 ease-in-out;
 		cursor: pointer;
 		color: var(--secondary);
-	}
-	.navButton {
-		font-size: 16px;
-		padding: 2.5px 10px 2.5px 10px;
-		cursor: pointer;
 	}
 }
 

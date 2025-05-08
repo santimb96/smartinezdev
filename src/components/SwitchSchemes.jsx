@@ -20,8 +20,8 @@ const SwicthSchemes = () => {
     setScheme((prevscheme) => (prevscheme === 'light' ? 'dark' : 'light'))
   }
   return (
-    <button onClick={toggleScheme} aria-label='Cambiar tema'>
-      {scheme === 'dark' ? <Sun className='min-w-4 w-4 md:w-5' strokeWidth={1.5} /> : <Moon className='min-w-4 w-4 md:w-5' strokeWidth={1.5} />}
+    <button onClick={toggleScheme} className='min-w-max p-2.5 border border-transparent rounded-full flex justify-center items-center lg:hover:border lg:hover:border-[var(--secondary)]/80' aria-label='Cambiar tema'>
+      {scheme === 'dark' ? <Sun className='min-w-6' fill='orange' stroke='orange' strokeWidth={1.5} /> : <Moon className='min-w-6' fill='yellow' strokeWidth={1.5} />}
     </button>
   )
 }
