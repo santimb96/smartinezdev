@@ -4,35 +4,41 @@
 
 /* STATIC FONTS */
 @font-face {
-  font-family: 'CooperBTLight';
-  src:  url('/fonts/CooperBTLight.woff2') format('woff2')
+	font-family: 'CooperBTLight';
+	src: url('/fonts/CooperBTLight.woff2') format('woff2')
 }
 
 @font-face {
-  font-family: 'MaisonNeue';
-  src:  url('/fonts/MaisonNeue.woff2') format('woff2');
+	font-family: 'MaisonNeue';
+	src: url('/fonts/MaisonNeue.woff2') format('woff2');
 }
 
 /* VARIABLES */
 :root {
-  --primary: #F0F4F1;
+	--primary: #F0F4F1;
 	--secondary: #383B39;
 	--detail: #15A085;
 	--text: #383B39;
 	--header-footer: #9DA69F;
-  --button-hover-bg: #15A085; /* Light mode button hover background */
-  --button-hover-text: #F0F4F1; /* Light mode button hover text color */
+	--button-hover-bg: #15A085;
+	--nav-text-color: #F0F4F1;
+	/* Light mode button hover background */
+	--button-hover-text: #F0F4F1;
+	/* Light mode button hover text color */
 	--development-badge: #07856c;
 }
 
 :root[data-theme="dark"] {
-  --primary: #383B39;
-  --secondary: #F0F4F1;
-  --detail: #15A085;
-  --text: #F0F4F1;
-  --header-footer: #9DA69F;
-  --button-hover-bg: #15A085; /* Dark mode button hover background */
-  --button-hover-text: #F0F4F1; /* Dark mode button hover text color */
+	--primary: #383B39;
+	--secondary: #F0F4F1;
+	--detail: #15A085;
+	--text: #F0F4F1;
+	--header-footer: #9DA69F;
+	--button-hover-bg: #15A085;
+	--nav-text-color: #F0F4F1;
+	/* Dark mode button hover background */
+	--button-hover-text: #F0F4F1;
+	/* Dark mode button hover text color */
 	--development-badge: #21e5be;
 }
 
@@ -41,16 +47,19 @@
 }
 
 .buttonLink:hover {
-  background-color: var(--button-hover-bg);
-  color: var(--button-hover-text);
+	background-color: var(--button-hover-bg);
+	color: var(--button-hover-text);
 }
+
 /* GLOBAL STYLES AND CSS RESET */
 * {
 	min-width: 0;
 }
+
 html {
 	scroll-behavior: smooth;
 }
+
 main {
 	width: 100%;
 	display: flex;
@@ -58,7 +67,10 @@ main {
 	justify-content: start;
 	align-items: center;
 }
-img, video, svg {
+
+img,
+video,
+svg {
 	display: block;
 	height: auto;
 	max-width: 100%;
@@ -76,6 +88,7 @@ body {
 	margin: 0;
 	min-height: 100dvh;
 }
+
 nav {
 	min-width: 100%;
 	animation: nav-animation 0.25s linear both;
@@ -83,6 +96,7 @@ nav {
 	animation-range: 0 25px;
 	color: var(--text);
 }
+
 @keyframes nav-animation {
 	0% {
 		background: transparent;
@@ -92,66 +106,80 @@ nav {
 	100% {
 		background: var(--primary);
 		border-bottom: 1px solid var(--secondary);
-		box-shadow: 0 -10px 20px rgb(0, 0, 0); 
+		box-shadow: 0 -10px 20px rgb(0, 0, 0);
 	}
-} 
+}
 
 hr {
 	min-height: 2px;
-	background: linear-gradient(90deg,var(--primary), var(--secondary), var(--primary));
+	background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
 }
+
 .footerDivider {
 	border-top-width: 0px;
 	min-height: 1px !important;
-	background: linear-gradient(90deg,transparent , var(--primary), transparent) !important;
+	background: linear-gradient(90deg, transparent, var(--primary), transparent) !important;
 }
+
 .vertDivider {
 	width: 1.5px;
 	height: 100%;
 	background: var(--secondary);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-weight: bold;
 	text-wrap: balance;
 	font-family: "CooperBTLight";
 	letter-spacing: 0;
 }
+
 a {
 	text-decoration: none;
 	transition: all 0.25s ease-in-out;
-	&:hover {
-		color: var(--secondary);
-	}
 }
+
 p {
 	text-wrap: pretty;
 	font-weight: 500;
 	line-height: 1.5;
 }
+
 body {
 	font-size: 1rem;
 }
+
 h1 {
 	font-size: 30px;
 }
+
 h2 {
 	font-size: 22px;
 }
+
 h3 {
 	font-size: 20px;
 }
+
 h4 {
 	font-size: 18px;
 }
+
 h5 {
 	font-size: 16px;
 }
+
 p {
 	font-size: 16px;
 	letter-spacing: -0.10em;
 	max-width: 75ch;
 }
+
 /* SPECIAL CLASSES */
 #scrollToTop {
 	background-color: var(--primary);
@@ -161,34 +189,42 @@ p {
 	padding: 10px;
 	position: fixed;
 	bottom: 20px;
-	right: calc((100vw - 60vw) / 2 + 20px); /* For large screens */
+	right: calc((100vw - 60vw) / 2 + 20px);
+	/* For large screens */
 	cursor: pointer;
 	opacity: 0;
 	transition: all 0.15s ease-in-out;
 }
+
 @media (max-width: 1024px) {
 	#scrollToTop {
-			right: calc((100vw - 75vw) / 2 + 20px); /* For medium screens */
+		right: calc((100vw - 75vw) / 2 + 20px);
+		/* For medium screens */
 	}
 }
 
 @media (max-width: 768px) {
 	#scrollToTop {
-			right: 20px; /* For mobile screens */
+		right: 20px;
+		/* For mobile screens */
 	}
 }
+
 .scrollToTopActive {
 	opacity: 1 !important;
 }
+
 .navButton {
 	font-size: 14px;
 }
+
 .lucideIcon {
 	margin-top: 0 !important;
 	min-height: 18px;
 	min-width: 18px;
 	width: 18px;
 }
+
 .badge {
 	letter-spacing: -0.05em;
 	font-size: 14px;
@@ -196,12 +232,15 @@ p {
 	text-underline-offset: 0.5em;
 	font-weight: bold;
 }
-.available, .notAvailable {
+
+.available,
+.notAvailable {
 	font-size: 0.7rem;
 	color: var(--primary);
 	border-radius: 100px;
 	padding: 5px 20px 5px 20px;
 	width: fit-content;
+
 	&:hover {
 		color: var(--primary);
 		opacity: 0.80;
@@ -211,6 +250,7 @@ p {
 .available {
 	background: rgb(54, 161, 54);
 }
+
 .notAvailable {
 	background: rgb(163, 59, 59);
 }
@@ -225,10 +265,12 @@ p {
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
+
 	& span {
 		margin-top: 4px;
 	}
 }
+
 .presentation {
 	width: 100%;
 	font-family: "CooperBTLight";
@@ -236,6 +278,7 @@ p {
 	letter-spacing: 0;
 	font-size: 20px;
 }
+
 .profileImg {
 	border-radius: 100%;
 	height: 100%;
@@ -244,33 +287,42 @@ p {
 	max-height: 250px;
 	max-width: 250px;
 }
+
 .companyImg {
 	width: 50px;
 	height: 50px;
 	object-fit: cover;
 }
+
 .timelineCard {
 	display: grid;
 	grid-template-columns: 50px auto;
 	gap: 20px;
 }
+
 .projectImg {
 	width: 100%;
 	object-fit: cover;
 }
+
 @media (min-width: 768px) {
-	.underlinedLink {
-		border-bottom: 1px solid var(--secondary);
+	.currentNavSection {
+		background-color: var(--detail);
+		color: var(--nav-text-color);
 	}
+
 	.scrollToTopActive:hover {
 		scale: 1.10;
 	}
+
 	.available {
 		font-size: 14px;
 	}
+
 	.badge {
 		font-size: 14px;
 	}
+
 	.buttonLink {
 		font-size: 16px;
 		transition: all .25 ease-in-out;
@@ -283,6 +335,7 @@ p {
 	.presentation {
 		max-width: 50ch;
 	}
+
 	.profileImg {
 		min-width: 250px;
 		max-height: 250px;
