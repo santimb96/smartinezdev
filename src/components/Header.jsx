@@ -20,7 +20,7 @@ const Header = () => {
         <div className='flex flex-row flex-wrap gap-2.5 mt-3'>
           <a href='https://www.linkedin.com/in/santi-martinez-bota/' target='_blank' rel='noreferrer' className='buttonLink'><span className='lucideIcon'><Linkedin strokeWidth={1.5} /></span><span>LinkedIn</span></a>
           <a href='mailto:santiagomartinezbota@gmail.com' target='_blank' rel='noreferrer' className='buttonLink'><span className='lucideIcon'><Mail strokeWidth={1.5} /></span><span>Contacto</span></a>
-          <button onClick={handleDownload} className='buttonLink'><span className='lucideIcon'><ArrowDownToLine strokeWidth={1.5} /></span><span>CV</span></button>
+          <button onClick={handleDownload} className='buttonLink duration-300 ease-in-out'><span className='lucideIcon'><ArrowDownToLine strokeWidth={1.5} /></span><span>CV</span></button>
         </div>
       </div>
     </section>
