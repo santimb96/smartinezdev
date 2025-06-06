@@ -3,33 +3,37 @@ import { LINKS } from '../constants/vars'
 import SwicthSchemes from './SwitchSchemes'
 
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState(window.location.hash.replace('#', ''))
+  const [activeSection, setActiveSection] = useState(typeof window !== 'undefined' ? window?.location.hash.replace('#', '') : '')
   const sectionsIds = LINKS.map(section => section.link.replace('#', ''))
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY
-      let currentSection = ''
+      if (typeof window !== 'undefined') {
+        const scrollPosition = window?.scrollY
+        let currentSection = ''
 
-      for (const sectionId of sectionsIds) {
-        const section = document.getElementById(sectionId)
-        if (section) {
-          const offsetTop = section.offsetTop - 100
-          const sectionHeight = section.offsetHeight + 100
+        for (const sectionId of sectionsIds) {
+          const section = document.getElementById(sectionId)
+          if (section) {
+            const offsetTop = section.offsetTop - 100
+            const sectionHeight = section.offsetHeight + 100
 
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + sectionHeight) {
-            currentSection = sectionId
+            if (scrollPosition >= offsetTop && scrollPosition < offsetTop + sectionHeight) {
+              currentSection = sectionId
+            }
           }
         }
+        setActiveSection(currentSection)
       }
-      setActiveSection(currentSection)
     }
 
-    window.addEventListener('scroll', handleScroll)
-    handleScroll()
+    if (typeof window !== 'undefined') {
+      window?.addEventListener('scroll', handleScroll)
+      handleScroll()
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
+      return () => {
+        window?.removeEventListener('scroll', handleScroll)
+      }
     }
   }, [])
 
