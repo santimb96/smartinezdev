@@ -3,7 +3,7 @@ import { EXPERIENCE } from '../constants/vars'
 import { BriefcaseBusiness } from 'lucide-preact'
 const Experience = () => {
   return (
-    <section id='experience' className='scroll-m-20 pb-[10px]'>
+    <section id='experience' className='scroll-m-20 pb-2.5'>
       <h2 className='scroll-m-20 pb-2.5 self-start mb-2.5 flex flex-row justify-start items-center gap-2.5'><BriefcaseBusiness className='min-w-[26px]' strokeWidth={2} />Experiencia</h2>
       <div className='flex flex-col gap-10'>
         {EXPERIENCE.map((experience, index) => <TimeLine key={index + experience.company} experience={experience} />)}
