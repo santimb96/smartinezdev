@@ -8,7 +8,7 @@ const EXPERIENCE = [
     role: 'Desarrollador front-end - UX/UI',
     date: 'actualmente',
     location: 'España',
-    description: 'Diseño y desarrollo de apps web para importantes clientes del mundo de la ciencia e investigación, desde readaptar aplicaciones open source hasta crear importantes herramientas para mejorar la eficiencia en el campo de la investigación',
+    description: 'Diseño y desarrollo de apps web para clientes del sector de la ciencia e investigación; desde readaptar aplicaciones open source como <i>Feedbin</i> para crear un gestor de contenido robusto y conciso para los clientes, hasta crear herramientas para mejorar la eficiencia a la hora de realizar documentación, investigación y gestión de datos.',
     logo: '/img/companies/atalis_logo.webp',
     stack: ['Figma', 'React', 'TailwindCSS', 'Rails', 'PostgreSQL']
   },
@@ -17,7 +17,7 @@ const EXPERIENCE = [
     role: 'Desarrollador full-stack',
     date: 'junio de 2022',
     location: 'España',
-    description: 'Prácticas de fin de ciclo en las cuales desarrollé un clon de Spotify funcional con categorías, listas y reproducción de música almacenada en un bucket de AWS; para los administradores, backoffice para la gestión de datos.',
+    description: 'Prácticas de fin de ciclo en las cuales desarrollé un clon de Spotify funcional con categorías, listas y reproducción de música almacenada en un bucket de AWS. La app cuenta con un backoffice para toda gestión de datos: desde usuarios hasta listas de reproducción, artistas y ficheros de música.',
     logo: '/img/companies/wozzo_logo.webp',
     stack: ['React', 'Express', 'MongoDB', 'AWS S3', 'MaterialUI', 'SCSS']
   }
@@ -71,7 +71,7 @@ const PROJECTS = [
     img: '/img/projects/spoticlone.webp',
     deployment: 'https://music-project-wozzo-santimb96.vercel.app/list',
     repository: 'https://github.com/santimb96/music-project-wozzo',
-    description: 'Clon de <i>Spotify</i> que cuenta con listas de reproducción por temática, la cual incluye canciones reproducibles en toda la app mediante el reproductor multimedia hecho específicamente para esta aplicación. Las canciones se almacenan en AWS S3 y se procesan desde el backend, que provee a la app toda la data necesaria.',
+    description: 'Clon de <i>Spotify</i> que cuenta con listas de reproducción por temática. Incluye canciones reproducibles en toda la app mediante el reproductor multimedia hecho específicamente para esta aplicación sin ningún tipo de libreria externa. Las canciones se almacenan en AWS S3 y se procesan desde el backend, que provee a la app toda la data necesaria.',
     stack: ['React', 'Express', 'MongoDB', 'SCSS', 'MaterialUI', 'Mongoose', 'AWS', 'Multer', 'JWT']
   },
   {
