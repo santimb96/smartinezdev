@@ -8,7 +8,7 @@ const EXPERIENCE = [
     role: 'Desarrollador front-end - UX/UI',
     date: 'actualmente',
     location: 'España',
-    description: 'Diseño y desarrollo de apps web para clientes del sector de la ciencia e investigación; desde readaptar aplicaciones open source como <i>Feedbin</i> para crear un gestor de contenido robusto y conciso para los clientes, hasta crear herramientas para mejorar la eficiencia a la hora de realizar documentación, investigación y gestión de datos.',
+    description: 'Diseño y desarrollo de apps web para clientes del sector de la ciencia e investigación; desde readaptar aplicaciones open source como Feedbin para crear un gestor de contenido robusto y conciso para los clientes, hasta crear herramientas para mejorar la eficiencia a la hora de realizar documentación, investigación y gestión de datos.',
     logo: '/img/companies/atalis_logo.webp',
     stack: ['Figma', 'React', 'TailwindCSS', 'Rails', 'PostgreSQL']
   },
