@@ -19,7 +19,7 @@ const Project = ({ name, area, date, img, deployment, repository, description, s
   const projectDate = new Date(date)
   const currentDate = new Date()
   return (
-    <article className='w-full max-w-sm md:max-w-full flex flex-col justify-start items-start gap-2.5 mb-10'>
+    <article className='w-full max-w-full flex flex-col justify-start items-start gap-2.5 mb-10'>
       <a href={deployment !== null && deployment} target='__blank' className='overflow-hidden'>
         <img src={img || 'src/assets/img/linkedinPic.webp'} alt={`${name} portada`} className={`duration-150 ease-out ${deployment !== null && 'lg:hover:scale-105 cursor-pointer'}`} />
       </a>
@@ -35,13 +35,13 @@ const Project = ({ name, area, date, img, deployment, repository, description, s
             <span className='min-w-6 opacity-90'><MessageCircleWarning strokeWidth={2} /></span>
             <p className='opacity-90 font-semibold italic'>Este proyecto es privado, por lo que el código no está disponible en estos momentos</p>
           </div>
-          )
+        )
         : (
           <div className='flex flex-row gap-2.5 flex-wrap'>
             {deployment !== null && <a href={deployment} target='_blank' rel='noreferrer' className='buttonLink'><span className='lucideIcon'><Globe strokeWidth={1.5} /></span><span>Sitio web</span></a>}
             {repository !== null && <a href={repository} target='_blank' rel='noreferrer' className='buttonLink'><span className='lucideIcon'><Github strokeWidth={1.5} /></span><span>Respositorio</span></a>}
           </div>
-          )}
+        )}
       <h4>Stack utilizado</h4>
       <div className='flex flex-row gap-5 flex-wrap'>
         {stack.map((tech, index) => <span key={tech + index} className='badge'>{tech}</span>)}

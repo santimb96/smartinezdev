@@ -13,7 +13,12 @@ const Footer = () => {
         })}
       </div>
       <hr className='footerDivider md:w-[75vw] lg:w-[60vw] w-full my-5' />
-      <span className='text-center'>Hecho con ♥️ por Santi Martínez. Ningún derecho reservado.</span>
+      <span className='text-center'>
+        Hecho con ♥️ por
+        <a href='https://github.com/santimb96' target='_blank' rel='noreferrer' className='underline ml-1.5'>
+          Santi Martínez.
+        </a>
+      </span>
     </footer>
   )
 }

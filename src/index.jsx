@@ -8,9 +8,10 @@ import Divider from './components/globals/Divider'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 import ScrollToTop from './components/globals/ScrollToTop'
+import Contact from './components/Contact'
 import './style.css'
 
-export function App () {
+export function App() {
   return (
     <>
       <Layout>
@@ -20,6 +21,7 @@ export function App () {
         <Experience />
         <Divider />
         <Projects />
+        <Contact />
       </Layout>
       <Footer />
       <ScrollToTop />
@@ -31,6 +33,6 @@ if (typeof window !== 'undefined') {
   hydrate(<App />, document.getElementById('app'))
 }
 
-export async function prerender (data) {
+export async function prerender(data) {
   return await ssr(<App {...data} />)
 }

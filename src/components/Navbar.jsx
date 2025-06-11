@@ -18,6 +18,10 @@ const Navbar = () => {
             const offsetTop = section.offsetTop - 100
             const sectionHeight = section.offsetHeight + 100
 
+            if (scrollPosition >= document.body.scrollHeight - window.innerHeight) {
+              currentSection = sectionsIds[sectionsIds.length - 1]
+            }
+
             if (scrollPosition >= offsetTop && scrollPosition < offsetTop + sectionHeight) {
               currentSection = sectionId
             }
@@ -40,10 +44,10 @@ const Navbar = () => {
   return (
     <header className='w-full flex flex-row justify-center'>
       <nav className='fixed top-0 z-50 flex flex-row justify-center gap-4 md:gap-5 md:justify-center py-2.5 px-5'>
-        {LINKS.map(({ link, title, IconComponent }, index) => {
+        {LINKS.map(({ link, title, IconComponent }) => {
           const isActive = activeSection === link.replace('#', '')
           return (
-            <a key={title} href={index !== LINKS.length - 1 ? link : 'mailto:santiagomartinezbota@gmail.com'} className={`${isActive ? 'currentNavSection' : ''} flex flex-col justify-center items-center md:flex md:flex-row md:justify-center md:items-center md:gap-2.5 rounded-full md:px-5 lg:py-1 text-[16px] duration-150 ease-in-out`}>
+            <a key={title} href={link} className={`${isActive ? 'currentNavSection' : ''} flex flex-col justify-center items-center md:flex md:flex-row md:justify-center md:items-center md:gap-2.5 rounded-full md:px-5 lg:py-1 text-[16px] duration-150 ease-in-out`}>
               <span className='order-2 hidden md:block md:order-2 pt-[2px]'>{title}
               </span>
               {IconComponent && (
