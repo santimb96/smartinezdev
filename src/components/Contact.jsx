@@ -19,18 +19,18 @@ const Contact = () => {
                 Contacto
             </h2>
             <div className='w-full flex-wrap lg:flex-nowrap flex flex-col justify-start items-start gap-2.5 lg:flex-row'>
-                <div className='w-full lg:w-1/2 flex flex-col justify-start items-start gap-2.5'>
+                <div className='w-full lg:w-3/4 flex flex-col justify-start items-start gap-2.5'>
                     <p>¡Ponte en contacto conmigo por cualquiera de las siguientes vías!</p>
-                    <div onClick={copyToClipboard} className={`group transition-all duration-300 ease-in-out cursor-pointer flex justify-center items-center gap-5 lg:mb-5 lg:w-full border border-slate-300 hover:border-[var(--detail)] rounded-full px-5 py-1 ${copied ? 'border-[var(--detail)] text-[var(--detail)]' : ''}`}>
+                    <div onClick={copyToClipboard} className={`mt-2.5 group transition-all duration-300 ease-in-out cursor-pointer flex justify-start items-center gap-5 lg:mb-5 lg:w-full border-slate-300 hover:border-[var(--detail)] rounded-full ${copied ? 'border-[var(--detail)] text-[var(--detail)]' : ''}`}>
                         <span className={`group-hover:text-[var(--detail)] group-hover:scale-105 transition-all`}>santiagomartinezbota@gmail.com</span>
                         <span className={`group-hover:text-[var(--detail)] group-hover:scale-110 transition-all lucideIcon relative`}>
-                            {copied ? <CopyCheck strokeWidth={1.5} /> : <Copy strokeWidth={1.5} />}
+                            {copied ? <CopyCheck strokeWidth={1.5} /> : <Copy strokeWidth={2} />}
                             {copied && <small className='absolute bottom-7 -right-5 min-w-full bg-[var(--detail)] text-[var(--primary)] rounded-full px-2.5 py-1 text-[10px] z-10 duration-150 ease-in-out'>¡Copiado!</small>}
                         </span>
                     </div>
 
                 </div>
-                <div className='flex justify-start items-start lg:flex-col gap-2.5 flex-wrap lg:w-1/2'>
+                <div className='flex justify-start items-start lg:flex-col gap-2.5 flex-wrap lg:w-1/2 mt-5 lg:mt-0'>
                     <a href='mailto:santiagomartinezbota@gmail.com' target='_blank' rel='noreferrer' className='buttonLink flex justify-start items-center gap-5 lg:w-full'>
                         <span className='lucideIcon'>
                             <Mail strokeWidth={1.5} />
