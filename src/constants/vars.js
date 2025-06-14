@@ -4,9 +4,18 @@ const LINKS = [{ link: '#aboutme', title: 'Sobre mí', IconComponent: UserRoundC
 
 const EXPERIENCE = [
   {
+    company: 'Freelance',
+    role: 'Desarrollador full-stack',
+    date: 'actualmente',
+    location: 'España',
+    description: 'Diseño y desarrollo de aplicaciones web para todo tipo de clientes y bajo demanda. El último proyecto que se está llevando a cabo es a web de Ressò - Centre d\'entrenament, desarrollándose en NextJS como fullstack; TailwindCSS para estilos rápidos, modernos y escalables y cara al futuro se utilizará base de datos SQL, OAuth y hosting en Vercel.',
+    logo: '/img/companies/freelance.webp',
+    stack: ['React', 'NextJS', 'NodeJS', 'SQL', 'TailwindCSS', 'CSS', 'Vercel']
+  },
+  {
     company: 'Atalis Funding',
     role: 'Desarrollador front-end - UX/UI',
-    date: 'actualmente',
+    date: 'abril de 2025',
     location: 'España',
     description: 'Diseño y desarrollo de apps web para clientes del sector de la ciencia e investigación; desde readaptar aplicaciones open source como Feedbin para crear un gestor de contenido robusto y conciso para los clientes, hasta crear herramientas para mejorar la eficiencia a la hora de realizar documentación, investigación y gestión de datos.',
     logo: '/img/companies/atalis_logo.webp',

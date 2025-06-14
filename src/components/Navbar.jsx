@@ -52,7 +52,7 @@ const Navbar = () => {
               </span>
               {IconComponent && (
                 <span className={`order-1 min-w-6 p-2.5 md:p-0 flex justify-center items-center ${isActive ? 'text-[var(--detail)] md:text-current' : ''}`}>
-                  <IconComponent className='min-w-6' strokeWidth={1.5} />
+                  <IconComponent className='min-w-6' strokeWidth={2} />
                 </span>
               )}
             </a>

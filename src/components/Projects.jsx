@@ -38,8 +38,8 @@ const Project = ({ name, area, date, img, deployment, repository, description, s
         )
         : (
           <div className='flex flex-row gap-2.5 flex-wrap'>
-            {deployment !== null && <a href={deployment} target='_blank' rel='noreferrer' className='buttonLink'><span className='lucideIcon'><Globe strokeWidth={1.5} /></span><span>Sitio web</span></a>}
-            {repository !== null && <a href={repository} target='_blank' rel='noreferrer' className='buttonLink'><span className='lucideIcon'><Github strokeWidth={1.5} /></span><span>Respositorio</span></a>}
+            {deployment !== null && <a href={deployment} target='_blank' rel='noreferrer' className='buttonLink'><span className='lucideIcon'><Globe strokeWidth={2} /></span><span>Sitio web</span></a>}
+            {repository !== null && <a href={repository} target='_blank' rel='noreferrer' className='buttonLink'><span className='lucideIcon'><Github strokeWidth={2} /></span><span>Respositorio</span></a>}
           </div>
         )}
       <h4>Stack utilizado</h4>
