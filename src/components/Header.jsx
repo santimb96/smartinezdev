@@ -1,12 +1,14 @@
 /* eslint-disable no-unused-vars */
-import { Linkedin, Mail, ArrowDownToLine } from 'lucide-preact'
+import { Mail, ArrowDownToLine } from 'lucide-preact'
 import linkedinPic from '../../public/img/linkedinPic.webp'
 import LinkedInIcon from '../icons/LinkedInIcon'
 const Header = () => {
   const START_YEAR = 2021
   return (
     <section id='aboutme' className='h-full scroll-m-28 mt-20 flex flex-col items-center gap-5 lg:flex-row lg:items-center lg:justify-center group'>
-      <img src={linkedinPic} loading='eager' alt='Profile picture' className='profileImg grayscale lg:group-hover:grayscale-0 duration-300 ease-in-out' />
+      <img src={linkedinPic} loading='eager'
+        // @ts-ignore
+        fetchpriority='high' alt='Profile picture' className='profileImg grayscale lg:group-hover:grayscale-0 duration-300 ease-in-out' />
       <div className='flex flex-col justify-between h-full'>
         <h1>Santi Martínez</h1>
         <p className='presentation'>Programador web con <strong>+ de {new Date().getFullYear() - START_YEAR} años de experiencia</strong> como desarrollador <strong><i>front-end</i></strong>, así como en el <strong>diseño de interfaces y experiencia de usuario</strong>. Keep it simple 😉</p>

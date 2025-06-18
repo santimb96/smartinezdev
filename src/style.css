@@ -5,12 +5,14 @@
 /* STATIC FONTS */
 @font-face {
 	font-family: 'CooperBTLight';
-	src: url('/fonts/CooperBTLight.woff2') format('woff2')
+	src: url('/fonts/CooperBTLight.woff2') format('woff2');
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'MaisonNeue';
 	src: url('/fonts/MaisonNeue.woff2') format('woff2');
+	font-display: swap;
 }
 
 /* VARIABLES */
@@ -140,7 +142,7 @@ h5,
 h6 {
 	font-weight: bold;
 	text-wrap: balance;
-	font-family: "CooperBTLight";
+	font-family: "CooperBTLight", "Courier", monospace;
 	letter-spacing: 0;
 }
 
@@ -278,7 +280,7 @@ p {
 
 .presentation {
 	width: 100%;
-	font-family: "CooperBTLight";
+	font-family: "CooperBTLight", ;
 	font-weight: normal;
 	letter-spacing: 0;
 	font-size: 20px;
