@@ -84,7 +84,7 @@ svg {
 }
 
 body {
-	font-family: "MaisonNeue", "Courier", monospace !important;
+	font-family: "MaisonNeue", "Courier", monospace;
 	letter-spacing: -0.10em;
 	color: var(--text);
 	background: var(--primary);
@@ -280,7 +280,7 @@ p {
 
 .presentation {
 	width: 100%;
-	font-family: "CooperBTLight", ;
+	font-family: "CooperBTLight", "Courier", monospace;
 	font-weight: normal;
 	letter-spacing: 0;
 	font-size: 20px;
