@@ -47,7 +47,7 @@ const Navbar = () => {
         {LINKS.map(({ link, title, IconComponent }) => {
           const isActive = activeSection === link.replace('#', '')
           return (
-            <a key={title} href={link} className={`${isActive ? 'currentNavSection' : ''} flex flex-col justify-center items-center md:flex md:flex-row md:justify-center md:items-center md:gap-2.5 rounded-full md:px-5 lg:py-1 text-[16px] duration-150 ease-in-out`}>
+            <a key={title} href={link} aria-label={'Ir a la sección ' + title} className={`${isActive ? 'currentNavSection' : ''} flex flex-col justify-center items-center md:flex md:flex-row md:justify-center md:items-center md:gap-2.5 rounded-full md:px-5 lg:py-1 text-[16px] duration-150 ease-in-out`}>
               <span className='order-2 hidden md:block md:order-2 pt-[2px]'>{title}
               </span>
               {IconComponent && (

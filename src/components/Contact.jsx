@@ -27,10 +27,9 @@ const Contact = () => {
                         <span className={`group-hover:text-[var(--detail)] group-hover:scale-105 transition-all`}>santiagomartinezbota@gmail.com</span>
                         <span className={`group-hover:text-[var(--detail)] group-hover:scale-110 transition-all lucideIcon relative`}>
                             {copied ? <CopyCheck strokeWidth={2} /> : <Copy strokeWidth={2} />}
-                            {copied && <small className='absolute bottom-7 -right-5 min-w-full bg-[var(--detail)] text-[var(--primary)] rounded-full px-2.5 py-1 text-[10px] z-10 duration-150 ease-in-out'>¡Copiado!</small>}
+                            {copied && <small className='absolute bottom-7 -right-5 min-w-full bg-[var(--detail)] text-[var(--primary)] rounded-full px-1 text-[10px] z-10 duration-150 ease-in-out'>¡Copiado!</small>}
                         </span>
                     </div>
-
                 </div>
                 <div className='flex justify-start items-start lg:flex-col gap-2.5 flex-wrap lg:w-1/2 mt-5 lg:mt-0'>
                     <a href='mailto:santiagomartinezbota@gmail.com' target='_blank' rel='noreferrer' className='buttonLink flex justify-start items-center gap-5 lg:w-full'>
@@ -58,10 +57,10 @@ const Contact = () => {
                     ¿Te ha gustado mi portfolio? Sería de gran ayuda que lo compartas con tu circulo de contactos. ¡Muchísimas gracias!
                 </p>
                 <div className='mt-10 flex justify-center items-center gap-5'>
-                    <a href='whatsapp://send?text=¡Hola! Me gustaría compartir contigo el portfolio de Santiago Martínez' target='_blank' rel='noreferrer' className='min-w-6 hover:text-[var(--detail)] duration-150 ease-in-out'>
+                    <a href='whatsapp://send?text=¡Hola! Me gustaría compartir contigo el portfolio de Santiago Martínez' target='_blank' rel='noreferrer' aria-label='Compartir por WhatsApp' className='min-w-6 hover:text-[var(--detail)] duration-150 ease-in-out'>
                         <WhatsAppIcon width='46px' height='46px' />
                     </a>
-                    <a href="https://www.linkedin.com/shareArticle?url=https://smartinezdev.com&title=Portfolio%20de%20Santiago%20Martínez&summary=Un%20portfolio%20desarrollado%20con%20ReactJS%20y%20TailwindCSS.&source=SmartinezDev" target="_blank" className='min-w-6 hover:text-[var(--detail)] duration-150 ease-in-out'>
+                    <a href="https://www.linkedin.com/shareArticle?url=https://smartinezdev.com&title=Portfolio%20de%20Santiago%20Martínez&summary=Un%20portfolio%20desarrollado%20con%20ReactJS%20y%20TailwindCSS.&source=SmartinezDev" target="_blank" rel='noreferrer' aria-label='Compartir por LinkedIn' className='min-w-6 hover:text-[var(--detail)] duration-150 ease-in-out'>
                         <LinkedInIcon width='36px' height='36px' />
                     </a>
                 </div>
