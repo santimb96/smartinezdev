@@ -20,7 +20,7 @@ const Project = ({ name, area, date, img, deployment, repository, description, s
   const currentDate = new Date()
   return (
     <article className='w-full max-w-full flex flex-col justify-start items-start gap-2.5 mb-10'>
-      <a href={deployment !== null ? deployment : repository} target='__blank' className='overflow-hidden'>
+      <a href={deployment !== null ? deployment : repository !== null ? repository : '#'} target='__blank' className='overflow-hidden'>
         <img src={img || 'src/assets/img/linkedinPic.webp'} alt={`${name} portada`} className={`duration-150 ease-out ${deployment !== null && 'lg:hover:scale-105 cursor-pointer'}`} />
       </a>
       <div className='w-full flex flex-col'>
