@@ -6,7 +6,7 @@ const Header = () => {
   const START_YEAR = 2021
   return (
     <section id='aboutme' className='h-full scroll-m-28 mt-20 flex flex-col items-center gap-5 lg:flex-row lg:items-center lg:justify-center group'>
-      <img src={linkedinPic} loading='eager'
+      <img src={linkedinPic}
         // @ts-ignore
         fetchpriority='high' alt='Profile picture' className='profileImg grayscale lg:group-hover:grayscale-0 duration-300 ease-in-out' />
       <div className='flex flex-col justify-between h-full'>
