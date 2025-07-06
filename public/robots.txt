@@ -1,0 +1,22 @@
+User-Agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /404
+Crawl-delay: 1
+
+User-Agent: Googlebot
+Disallow: /private/
+Disallow: /admin/
+
+User-Agent: AhrefsBot
+Disallow: /
+
+User-Agent: SemrushBot
+Disallow: /
+
+User-Agent: MJ12bot
+Disallow: /
+
+Host: https://www.smartinezdev.com
+Sitemap: https://www.smartinezdev.com/sitemap.xml
