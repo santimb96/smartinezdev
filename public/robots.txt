@@ -18,5 +18,5 @@ Disallow: /
 User-Agent: MJ12bot
 Disallow: /
 
-Host: https://www.smartinezdev.com
-Sitemap: https://www.smartinezdev.com/sitemap.xml
+Host: https://smartinezdev.com
+Sitemap: https://smartinezdev.com/sitemap.xml
