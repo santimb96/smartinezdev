@@ -10,7 +10,7 @@
 		"@heroicons/react": "^2.1.5",
 		"lucide-preact": "^0.424.0",
 		"preact": "^10.22.1",
-		"preact-iso": "^2.6.3",
+		"preact-iso": "^2.9.2",
 		"preact-render-to-string": "^6.5.7"
 	},
 	"devDependencies": {
