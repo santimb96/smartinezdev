@@ -38,7 +38,7 @@ const PROJECTS = [
     area: 'Full-stack',
     date: '2025-06-11',
     img: '/img/projects/resso-centre-entrenament.webp',
-    deployment: 'https://ressocentreentrenament.vercel.app/',
+    deployment: 'https://ressocentredentrenament.com',
     repository: 'https://github.com/santimb96/ressoo-centre-entrenament',
     description: 'Web para el centro <i>Ressò - Centre d\'entrenament</i>, situado en Marratxí (Palma de Mallorca). Ésta ofrece servicios de gimnasio, entrenos personales, seminarios, etc. El proyecto está desarrollado en NextJS para posible escalado y migración de datos de la aplicación.',
     stack: ['NextJS', 'React', 'Tailwind CSS', 'CSS', 'View transition']
