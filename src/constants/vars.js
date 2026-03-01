@@ -4,6 +4,15 @@ const LINKS = [{ link: '#aboutme', title: 'Sobre mí', IconComponent: UserRoundC
 
 const EXPERIENCE = [
   {
+    company: 'Pixind',
+    role: 'Desarrollador full-stack',
+    date: 'actualmente',
+    location: 'España',
+    description: 'Diseño y desarrollo de aplicaciones web orientadas al ámbito del deporte y alto rendimiento.',
+    logo: '/img/companies/pixind.webp',
+    stack: ['Go', 'HTMX', 'JavaScript', 'PostgreSQL', 'TailwindCSS', 'Docker']
+  },
+  {
     company: 'Freelance',
     role: 'Desarrollador full-stack',
     date: 'actualmente',
