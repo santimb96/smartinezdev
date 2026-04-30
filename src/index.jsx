@@ -12,6 +12,19 @@ import NotFound from './components/NotFound'
 import { HOME_SEO, resetSeoState, usePageSeo } from './seo'
 import './style.css'
 
+const STATIC_ASSET_PATTERN = /\.(pdf|png|jpe?g|webp|gif|svg|ico|woff2?|ttf|eot|mp4|webm|mp3|wav|zip)$/i
+
+const filterPrerenderLinks = (links) => {
+  if (!links) return links
+
+  return new Set(
+    [...links].filter((link) => {
+      if (typeof link !== 'string') return false
+      return !STATIC_ASSET_PATTERN.test(link)
+    })
+  )
+}
+
 export function App () {
   return (
     <LocationProvider scope='/app'>
@@ -59,6 +72,7 @@ export async function prerender (data) {
 
   return {
     ...result,
+    links: filterPrerenderLinks(result.links),
     head: {
       lang: seoHead.lang,
       title: seoHead.title,
