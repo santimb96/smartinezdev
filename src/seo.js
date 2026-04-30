@@ -101,7 +101,7 @@ const createScriptEntry = (schema, index) => ({
   props: {
     type: 'application/ld+json',
     id: `ld-json-${index}`,
-    dangerouslySetInnerHTML: { __html: JSON.stringify(schema) }
+    textContent: JSON.stringify(schema)
   }
 })
 
