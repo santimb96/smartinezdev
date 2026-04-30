@@ -15,9 +15,9 @@ const ScrollToTop = () => {
     }
   }, [])
   return (
-    <div id='scrollToTop' onClick={() => typeof window !== 'undefined' && window.scrollTo({ top: 0, behavior: 'smooth' })}>
+    <button type='button' id='scrollToTop' aria-label='Volver arriba' onClick={() => typeof window !== 'undefined' && window.scrollTo({ top: 0, behavior: 'smooth' })}>
       <ArrowUp className='min-w-[24px]' strokeWidth={2} />
-    </div>
+    </button>
   )
 }
 

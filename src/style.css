@@ -22,7 +22,8 @@
 	--detail: #15A085;
 	--text: #383B39;
 	--header-footer: #9DA69F;
-	--button-hover-bg: #15A085;
+	--button-hover-bg: #0D7A63;
+	--filled-accent-bg: #0D7A63;
 	--nav-text-color: #F0F4F1;
 	/* Light mode button hover background */
 	--button-hover-text: #F0F4F1;
@@ -36,7 +37,8 @@
 	--detail: #15A085;
 	--text: #F0F4F1;
 	--header-footer: #9DA69F;
-	--button-hover-bg: #15A085;
+	--button-hover-bg: #0D7A63;
+	--filled-accent-bg: #0D7A63;
 	--nav-text-color: #F0F4F1;
 	/* Dark mode button hover background */
 	--button-hover-text: #F0F4F1;
@@ -51,6 +53,14 @@
 .buttonLink:hover {
 	background-color: var(--button-hover-bg);
 	color: var(--button-hover-text);
+}
+
+.headingMeta {
+	font-size: 16px;
+	font-weight: bold;
+	text-wrap: balance;
+	font-family: "CooperBTLight", "Courier", monospace;
+	letter-spacing: 0;
 }
 
 /* GLOBAL STYLES AND CSS RESET */
@@ -161,6 +171,11 @@ body {
 	font-size: 1rem;
 }
 
+button {
+	font: inherit;
+	color: inherit;
+}
+
 h1 {
 	font-size: 30px;
 }
@@ -194,6 +209,7 @@ p {
 	border-radius: 10px;
 	border: 2px solid var(--secondary);
 	padding: 10px;
+	font: inherit;
 	position: fixed;
 	bottom: 20px;
 	right: calc((100vw - 60vw) / 2 + 20px);
@@ -201,6 +217,16 @@ p {
 	cursor: pointer;
 	opacity: 0;
 	transition: all 0.15s ease-in-out;
+}
+
+.copyMailButton {
+	font: inherit;
+	color: inherit;
+	background: transparent;
+	border-width: 1px;
+	border-style: solid;
+	padding: 0;
+	text-align: left;
 }
 
 @media (max-width: 1024px) {
@@ -315,7 +341,7 @@ p {
 
 @media (min-width: 768px) {
 	.currentNavSection {
-		background-color: var(--detail);
+		background-color: var(--filled-accent-bg);
 		color: var(--nav-text-color);
 	}
 

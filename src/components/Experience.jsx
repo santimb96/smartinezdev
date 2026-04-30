@@ -21,14 +21,14 @@ const TimeLine = ({ experience }) => {
       <div className='flex flex-col gap-2.5'>
         <div>
           <h3>{role}</h3>
-          <h5 className='flex flex-row gap-2.5'>
+          <p className='headingMeta flex flex-row gap-2.5'>
             {company}
             <span>|</span>
             <time>{date}</time>
-          </h5>
+          </p>
         </div>
         <p>{description}</p>
-        <h5>Stack utilizado</h5>
+        <p className='headingMeta'>Stack utilizado</p>
         <div className='flex flex-wrap gap-5'>
           {stack?.map((tech, index) => <span key={tech + index} className='badge'>{tech}</span>)}
         </div>
