@@ -22,7 +22,7 @@ const Contact = () => {
             <div className='w-full flex-wrap lg:flex-nowrap flex flex-col justify-start items-start gap-2.5 lg:flex-row'>
                 <div className='w-full lg:w-3/4 flex flex-col justify-start items-start gap-2.5'>
                     <p>¡Ponte en contacto conmigo por cualquiera de las siguientes vías!</p>
-                    <button type='button' onClick={copyToClipboard} aria-label='Copiar correo electrónico de Santiago Martínez' className={`copyMailButton mt-2.5 group transition-all duration-300 ease-in-out cursor-pointer flex justify-start items-center gap-5 lg:mb-5 lg:w-full border-slate-300 hover:border-[var(--detail)] rounded-full ${copied ? 'border-[var(--detail)] text-[var(--detail)]' : ''}`}>
+                    <button type='button' onClick={copyToClipboard} aria-label='Copiar correo electrónico de Santiago Martínez' className={`copyMailButton mt-2.5 group transition-all duration-300 ease-in-out cursor-pointer flex justify-start items-center gap-5 lg:mb-5 lg:w-full rounded-full ${copied ? 'text-[var(--detail)]' : ''}`}>
                         <span className={`group-hover:text-[var(--detail)] group-hover:scale-105 transition-all`}>santiagomartinezbota@gmail.com</span>
                         <span className={`group-hover:text-[var(--detail)] group-hover:scale-110 transition-all lucideIcon relative`}>
                             {copied ? <CopyCheck strokeWidth={2} /> : <Copy strokeWidth={2} />}

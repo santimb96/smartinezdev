@@ -223,8 +223,7 @@ p {
 	font: inherit;
 	color: inherit;
 	background: transparent;
-	border-width: 1px;
-	border-style: solid;
+	border: none;
 	padding: 0;
 	text-align: left;
 }
