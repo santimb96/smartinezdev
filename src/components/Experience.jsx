@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { EXPERIENCE } from '../constants/vars'
 import { BriefcaseBusiness } from 'lucide-preact'
 
@@ -18,7 +17,7 @@ const TimeLine = ({ experience }) => {
   const { company, role, date, description, logo, stack } = experience
   return (
     <div className='timelineCard'>
-      <img src={logo} alt='Company picture' className='companyImg mt-[7px]' />
+      <img src={logo} alt={`Logo de ${company}`} className='companyImg mt-[7px]' />
       <div className='flex flex-col gap-2.5'>
         <div>
           <h3>{role}</h3>

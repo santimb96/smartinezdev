@@ -2,8 +2,6 @@ User-Agent: *
 Allow: /
 Disallow: /private/
 Disallow: /admin/
-Disallow: /404
-Crawl-delay: 1
 
 User-Agent: Googlebot
 Disallow: /private/
@@ -18,5 +16,4 @@ Disallow: /
 User-Agent: MJ12bot
 Disallow: /
 
-Host: https://smartinezdev.com
 Sitemap: https://smartinezdev.com/sitemap.xml

@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { Moon, Sun } from 'lucide-preact'
 import { useEffect, useState } from 'preact/hooks'
 

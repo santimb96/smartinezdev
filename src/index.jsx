@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { hydrate, prerender as ssr, Router, Route, LocationProvider } from 'preact-iso'
 import Layout from './components/Layout'
 import Navbar from './components/Navbar'
@@ -10,9 +9,10 @@ import Footer from './components/Footer'
 import ScrollToTop from './components/globals/ScrollToTop'
 import Contact from './components/Contact'
 import NotFound from './components/NotFound'
+import { HOME_SEO, resetSeoState, usePageSeo } from './seo'
 import './style.css'
 
-export function App() {
+export function App () {
   return (
     <LocationProvider scope='/app'>
       <Router>
@@ -23,7 +23,9 @@ export function App() {
   )
 }
 
-function WebApp() {
+function WebApp () {
+  usePageSeo('/')
+
   return (
     <>
       <Layout>
@@ -45,6 +47,22 @@ if (typeof window !== 'undefined') {
   hydrate(<App />, document.getElementById('app'))
 }
 
-export async function prerender(data) {
-  return await ssr(<App {...data} />)
+export async function prerender (data) {
+  resetSeoState()
+
+  const result = await ssr(<App {...data} />)
+  const seoHead = globalThis.__SEO_HEAD__ || {
+    title: HOME_SEO.title,
+    lang: 'es',
+    elements: []
+  }
+
+  return {
+    ...result,
+    head: {
+      lang: seoHead.lang,
+      title: seoHead.title,
+      elements: new Set(seoHead.elements)
+    }
+  }
 }

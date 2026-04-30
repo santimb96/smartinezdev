@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     preact({
       prerender: {
-        enabled: false,
+        enabled: true,
         renderTarget: '#app'
       }
     })
