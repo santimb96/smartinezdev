@@ -21,7 +21,7 @@
 	--ink-soft: #59615A;
 	--rule: #B7BDB4;
 	--plate: #D2D7CF;
-	--signal: #2545D6;
+	--signal: #17544A;
 	--signal-ink: #F2F5F0;
 	--rail: 104px;
 	--gut: clamp(20px, 4vw, 64px);
@@ -34,7 +34,7 @@
 	--ink-soft: #9AA39B;
 	--rule: #333A34;
 	--plate: #1B211C;
-	--signal: #8FA2FF;
+	--signal: #7FC0AE;
 	--signal-ink: #0E140F;
 }
 
@@ -309,12 +309,12 @@ img, svg { display: block; max-width: 100%; height: auto; }
 .btn:hover { background: var(--ink); color: var(--paper); }
 
 .btn-primary {
-	background: var(--signal);
-	border-color: var(--signal);
-	color: var(--signal-ink);
+	background: var(--ink);
+	border-color: var(--ink);
+	color: var(--paper);
 }
 
-.btn-primary:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.btn-primary:hover { background: var(--signal); border-color: var(--signal); color: var(--signal-ink); }
 
 .portrait { margin: 0; }
 
@@ -455,11 +455,11 @@ img, svg { display: block; max-width: 100%; height: auto; }
 	margin-top: 0;
 	font-size: 13px;
 	font-weight: 600;
-	color: var(--signal);
-	box-shadow: inset 0 -1px 0 var(--signal);
+	color: var(--ink);
+	box-shadow: inset 0 -1px 0 var(--ink);
 }
 
-.spec-link:hover { color: var(--ink); box-shadow: inset 0 -1px 0 var(--ink); }
+.spec-link:hover { color: var(--signal); box-shadow: inset 0 -1px 0 var(--signal); }
 
 .plate-note {
 	display: flex;

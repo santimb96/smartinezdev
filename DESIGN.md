@@ -7,14 +7,14 @@ colors:
   graphite-soft: "#59615A"
   hairline: "#B7BDB4"
   plate-ground: "#D2D7CF"
-  signal-blue: "#2545D6"
+  signal-petrol: "#17544A"
   signal-ink: "#F2F5F0"
   vellum-dark: "#111511"
   graphite-inverse: "#E7EAE4"
   graphite-soft-dark: "#9AA39B"
   hairline-dark: "#333A34"
   plate-ground-dark: "#1B211C"
-  signal-blue-dark: "#8FA2FF"
+  signal-petrol-dark: "#7FC0AE"
 typography:
   display:
     fontFamily: "Archivo, ui-sans-serif, system-ui, sans-serif"
@@ -59,14 +59,14 @@ spacing:
   xxxl: "128px"
 components:
   button-primary:
-    backgroundColor: "{colors.signal-blue}"
-    textColor: "{colors.signal-ink}"
+    backgroundColor: "{colors.graphite}"
+    textColor: "{colors.vellum}"
     rounded: "{rounded.none}"
     padding: "0 20px"
     height: "46px"
   button-primary-hover:
-    backgroundColor: "{colors.graphite}"
-    textColor: "{colors.vellum}"
+    backgroundColor: "{colors.signal-petrol}"
+    textColor: "{colors.signal-ink}"
   button-secondary:
     backgroundColor: "{colors.vellum}"
     textColor: "{colors.graphite}"
@@ -102,7 +102,7 @@ La hoja se lee de arriba a abajo como un plano: bloque de título, secciones con
 La densidad es deliberada: el visitante que llega desde un link ve nombre, rol, estado, medida y acciones sin scrollear, y la obra empieza inmediatamente después. El retrato es una lámina con pie de foto, no un avatar.
 
 **Key Characteristics:**
-- Papel vellum y grafito; el cobalto aparece sólo en acción y estado.
+- Papel vellum y grafito; el petróleo aparece sólo en acción y estado.
 - Reglas de 1px en lugar de tarjetas, sombras o radios.
 - Cifras tabulares en toda la hoja; todo dato numérico se alinea.
 - Un único movimiento: la marca del rail avanza con el scroll.
@@ -110,10 +110,10 @@ La densidad es deliberada: el visitante que llega desde un link ve nombre, rol, 
 
 ## Colors
 
-Paleta de dos tintas más una señal: el papel y el grafito hacen todo el trabajo y el cobalto queda reservado para lo que se puede accionar o para el estado activo.
+Paleta de dos tintas más una señal: el papel y el grafito hacen todo el trabajo y el petróleo queda reservado para lo que se puede accionar o para el estado activo.
 
 ### Primary
-- **Cobalto de señal** (#2545D6 / #8FA2FF en oscuro): botón primario, enlaces de ficha, foco de teclado, marca del rail y punto de disponibilidad. Nunca se usa como fondo de una sección.
+- **Petróleo de señal** (#17544A / #7FC0AE en oscuro): botón primario, enlaces de ficha, foco de teclado, marca del rail y punto de disponibilidad. Nunca se usa como fondo de una sección.
 
 ### Neutral
 - **Papel vellum** (#E4E7E1 / #111511): fondo de la hoja y de la barra superior. En oscuro el papel se vuelve casi negro verdoso, no gris.
@@ -123,7 +123,7 @@ Paleta de dos tintas más una señal: el papel y el grafito hacen todo el trabaj
 - **Fondo de lámina** (#D2D7CF / #1B211C): relleno detrás de capturas e imágenes mientras cargan.
 
 ### Named Rules
-**La regla de la única tinta.** El cobalto cubre menos del 5% de cualquier pantalla. Su escasez es lo que lo vuelve legible como señal.
+**La regla de la única tinta.** El petróleo cubre menos del 5% de cualquier pantalla. Su escasez es lo que lo vuelve legible como señal.
 
 **La regla del papel primero.** Ninguna superficie se pinta de color para separar contenido: se separa con un filete de 1px.
 
@@ -169,8 +169,8 @@ No hay sombras. La profundidad se comunica con filetes de 1px, cambios de valor 
 
 ### Buttons
 - **Shape:** rectángulo de 46px de alto, sin radio, borde de 1px.
-- **Primary:** fondo cobalto, texto papel, icono de 15px a la izquierda.
-- **Hover / Focus:** el primario pasa a grafito con texto papel; el secundario invierte a fondo grafito. Foco visible de 2px en cobalto con offset de 3px.
+- **Primary:** fondo petróleo, texto papel, icono de 15px a la izquierda.
+- **Hover / Focus:** el primario pasa a grafito con texto papel; el secundario invierte a fondo grafito. Foco visible de 2px en petróleo con offset de 3px.
 - **Secondary:** fondo papel, texto grafito, borde grafito.
 
 ### Cards / Containers
@@ -193,15 +193,15 @@ Cada proyecto es una fila con captura y tabla (`Rol`, `Stack`, `Estado`) separad
 ## Do's and Don'ts
 
 ### Do:
-- **Do** reservar el cobalto para acción, foco y estado activo.
+- **Do** reservar el petróleo para acción, foco y estado activo.
 - **Do** separar con filetes de 1px y mantener el sistema plano.
 - **Do** usar cifras tabulares y alinear los datos en columna.
 - **Do** escribir el año, el rol, el stack y el estado de cada proyecto.
-- **Do** mantener el foco visible de 2px en cobalto con offset de 3px.
+- **Do** mantener el foco visible de 2px en petróleo con offset de 3px.
 
 ### Don't:
 - **Don't** usar sombras, degradados, glass ni radios de tarjeta.
 - **Don't** poner etiquetas en mayúsculas sobre los encabezados.
 - **Don't** introducir una segunda familia tipográfica.
-- **Don't** usar el cobalto como fondo de sección ni como color de texto largo.
+- **Don't** usar el petróleo como fondo de sección ni como color de texto largo.
 - **Don't** pasar el display de -0.04em de tracking ni el cuerpo de 80 caracteres por línea.
