@@ -27,3 +27,10 @@ pnpm-lock.yaml
 *.njsproj
 *.sln
 *.sw?
+
+# Herramientas y artefactos locales de impeccable
+.codex/
+.impeccable/review/
+.impeccable/questions/
+.impeccable/mocks/worlds/
+.impeccable/config.local.json
