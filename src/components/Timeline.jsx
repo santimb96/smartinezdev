@@ -16,7 +16,20 @@ const Timeline = () => {
       <div className='timeline'>
         {EXPERIENCE.map((experience) => (
           <div className='timeline-row' key={experience.company}>
-            <div className='timeline-year'>{yearLabel(experience)}</div>
+            <div className='timeline-year'>
+              {experience.logo && (
+                <img
+                  className='timeline-logo'
+                  src={experience.logo}
+                  alt=''
+                  width='24'
+                  height='24'
+                  loading='lazy'
+                  decoding='async'
+                />
+              )}
+              <span>{yearLabel(experience)}</span>
+            </div>
             <div>
               <h3 className='timeline-role'>{experience.role}</h3>
               <p className='timeline-meta'>

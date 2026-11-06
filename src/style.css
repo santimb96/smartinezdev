@@ -176,8 +176,22 @@ img, svg { display: block; max-width: 100%; height: auto; }
 .topbar-mark {
 	display: inline-flex;
 	align-items: center;
+	gap: 10px;
 	color: var(--ink);
 	transition: color 0.15s ease;
+}
+
+.topbar-wordmark {
+	font-size: 12px;
+	letter-spacing: 0.02em;
+	color: var(--ink-soft);
+	transition: color 0.15s ease;
+}
+
+.topbar-mark:hover .topbar-wordmark { color: var(--signal); }
+
+@media (max-width: 899px) {
+	.topbar-wordmark { display: none; }
 }
 
 .topbar-mark svg {
@@ -518,7 +532,27 @@ img, svg { display: block; max-width: 100%; height: auto; }
 	border-top: 1px solid var(--rule);
 }
 
-.timeline-year { font-size: 12.5px; color: var(--ink-soft); padding-top: 4px; }
+.timeline-year {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-top: 2px;
+	font-size: 12.5px;
+	color: var(--ink-soft);
+}
+
+.timeline-logo {
+	width: 28px;
+	height: 28px;
+	padding: 3px;
+	object-fit: contain;
+	border: 1px solid var(--rule);
+	opacity: 0.95;
+}
+
+:root[data-theme="dark"] .timeline-logo {
+	opacity: 0.85;
+}
 
 .timeline-role { font-size: 19px; font-weight: 600; letter-spacing: -0.02em; }
 

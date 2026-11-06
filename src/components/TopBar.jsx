@@ -11,6 +11,7 @@ const TopBar = () => {
       <div className='sheet topbar-inner'>
         <a className='topbar-mark' href='#perfil' aria-label='Santiago Martínez · SmartinezDev, ir al inicio'>
           <CodeXml strokeWidth={2} aria-hidden='true' />
+          <span className='topbar-wordmark' aria-hidden='true'>smartinezdev</span>
         </a>
         <div className='topbar-right'>
           <nav aria-label='Secciones' className='topbar-links'>

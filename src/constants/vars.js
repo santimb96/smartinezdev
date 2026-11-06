@@ -8,6 +8,7 @@ const LINKS = [
 const EXPERIENCE = [
   {
     company: 'Pixind',
+    logo: '/img/companies/pixind.webp',
     role: 'Desarrollador full-stack',
     date: 'actualmente',
     location: 'España',
@@ -16,6 +17,7 @@ const EXPERIENCE = [
   },
   {
     company: 'Freelance',
+    logo: '/img/companies/freelance.webp',
     role: 'Desarrollador full-stack',
     date: 'actualmente',
     location: 'España',
@@ -24,6 +26,7 @@ const EXPERIENCE = [
   },
   {
     company: 'Atalis Funding',
+    logo: '/img/companies/atalis_logo.webp',
     role: 'Desarrollador front-end · UX/UI',
     date: 'abril de 2025',
     dateTime: '2025-04',
@@ -33,6 +36,7 @@ const EXPERIENCE = [
   },
   {
     company: 'Wozzo',
+    logo: '/img/companies/wozzo_logo.webp',
     role: 'Desarrollador full-stack',
     date: 'junio de 2022',
     dateTime: '2022-06',
@@ -92,7 +96,7 @@ const PROJECTS = [
     caption: 'Script de extracción de contenido',
     area: 'Script',
     date: '2022-10-14',
-    img: '/img/projects/sx3Scrapping.webp',
+    img: '/img/projects/sx3Scraping.webp',
     deployment: null,
     repository: 'https://github.com/santimb96/sx3_content_scrapping',
     description: 'Obtención de contenido multimedia mediante scraping del DOM y de la API de <i>TV3</i>, con almacenamiento local y registro de la ejecución.',
