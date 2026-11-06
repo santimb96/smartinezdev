@@ -1,9 +1,6 @@
 import { EXPERIENCE } from '../constants/vars'
 
-const yearLabel = (experience) => {
-  if (experience.dateTime) return experience.dateTime.slice(0, 4)
-  return `${new Date().getFullYear()} —`
-}
+const yearLabel = (experience) => (experience.dateTime ? experience.dateTime.slice(0, 4) : '')
 
 const Timeline = () => {
   return (
@@ -28,7 +25,7 @@ const Timeline = () => {
                   decoding='async'
                 />
               )}
-              <span>{yearLabel(experience)}</span>
+              {yearLabel(experience) && <span>{yearLabel(experience)}</span>}
             </div>
             <div>
               <h3 className='timeline-role'>{experience.role}</h3>
