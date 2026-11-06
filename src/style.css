@@ -537,7 +537,7 @@ img, svg { display: block; max-width: 100%; height: auto; }
 	flex-direction: column;
 	align-items: center;
 	gap: 6px;
-	padding-top: 15px;
+	padding-top: 1px;
 	font-size: 11.5px;
 	line-height: 1;
 	color: var(--ink-soft);
