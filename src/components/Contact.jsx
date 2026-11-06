@@ -40,7 +40,7 @@ const Contact = () => {
 
       <div className='contact-grid'>
         <div>
-          <p className='contact-line'>¿Hablemos?</p>
+          <p className='contact-line'>¿Hablamos?</p>
           <p className='contact-soft'>
             Estoy disponible para entrevistas y proyectos. Cuéntame qué necesitas
             y te responderé con una propuesta concreta.

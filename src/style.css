@@ -173,6 +173,20 @@ img, svg { display: block; max-width: 100%; height: auto; }
 	letter-spacing: 0;
 }
 
+.topbar-mark {
+	display: inline-flex;
+	align-items: center;
+	color: var(--ink);
+	transition: color 0.15s ease;
+}
+
+.topbar-mark svg {
+	width: 22px;
+	height: 22px;
+}
+
+.topbar-mark:hover { color: var(--signal); }
+
 .topbar-right {
 	display: flex;
 	align-items: center;
