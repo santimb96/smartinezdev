@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1440px; height: 900px; overflow: hidden; }
+  body {
+    background: #FFD400; color: #111;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: -0.005em;
+  }
+  .band { display: flex; align-items: center; }
+  .top { height: 66px; padding: 0 44px; justify-content: space-between; border-bottom: 3px solid #111; }
+  .top .name { font-size: 17px; font-weight: 700; letter-spacing: 0.02em; }
+  .top .util { display: flex; gap: 20px; font-size: 13px; font-weight: 700; }
+  .lead { height: 330px; padding: 0 44px; justify-content: space-between; border-bottom: 3px solid #111; }
+  .lead .msg { display: flex; align-items: baseline; gap: 26px; }
+  .lead .dest { font-size: 96px; font-weight: 700; letter-spacing: -0.035em; line-height: 1; }
+  .lead .count { font-size: 26px; font-weight: 500; }
+  .lead .arrow { width: 118px; height: 118px; border: 4px solid #111; display: grid; place-items: center; font-size: 62px; font-weight: 700; margin-left: auto; }
+  .lead .dist { font-size: 15px; font-weight: 700; letter-spacing: 0.08em; }
+  .lead .sub { position: absolute; left: 44px; top: 300px; font-size: 14px; letter-spacing: 0.1em; }
+  .mid { height: 96px; background: #111; color: #fff; padding: 0 44px; justify-content: space-between; }
+  .mid .label { font-size: 15px; letter-spacing: 0.14em; }
+  .mid .eye { font-size: 40px; font-weight: 700; letter-spacing: -0.02em; }
+  .body { display: grid; grid-template-columns: 1fr 470px; gap: 40px; padding: 34px 44px; }
+  .shot { height: 268px; border: 3px solid #111; background: repeating-linear-gradient(0deg, #F5E27A 0 13px, #EFD75C 13px 26px); }
+  .cap { margin-top: 10px; font-size: 13px; font-weight: 700; display: flex; justify-content: space-between; }
+  .spec { font-size: 13px; }
+  .spec .row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 2px solid #111; font-weight: 700; }
+  .spec .row span:first-child { font-weight: 400; }
+  .spec .go { margin-top: 16px; display: inline-block; background: #111; color: #FFD400; padding: 12px 20px; font-size: 13px; font-weight: 700; }
+  .foot { position: absolute; left: 0; right: 0; bottom: 0; height: 74px; background: #111; color: #FFD400; padding: 0 44px; }
+  .foot .route { display: flex; gap: 34px; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; }
+  .foot .route .now { color: #fff; }
+  .foot .next { margin-left: auto; font-size: 13px; letter-spacing: 0.1em; }
+</style>
+</head>
+<body>
+  <div class="band top">
+    <span class="name">Santiago Martínez · SmartinezDev</span>
+    <span class="util"><span>ES</span><span>Tema</span></span>
+  </div>
+
+  <div class="band lead" style="position:relative">
+    <div class="msg">
+      <span class="dest">Obra</span>
+      <span class="count">7 proyectos</span>
+    </div>
+    <div class="arrow">→</div>
+    <div class="dist">2 MIN</div>
+    <div class="sub">DESARROLLADOR FULL-STACK · DISPONIBLE</div>
+  </div>
+
+  <div class="band mid">
+    <span class="label">AHORA</span>
+    <span class="eye">Pixind · Freelance</span>
+  </div>
+
+  <div class="body">
+    <div>
+      <div class="shot"></div>
+      <div class="cap"><span>RESSÒ · CENTRE D'ENTRENAMENT</span><span>VER SITIO →</span></div>
+    </div>
+    <div class="spec">
+      <div class="row"><span>Año</span><span>2025</span></div>
+      <div class="row"><span>Rol</span><span>Full-stack</span></div>
+      <div class="row"><span>Stack</span><span>Next.js · React · Tailwind</span></div>
+      <div class="row"><span>Estado</span><span>Finalizado</span></div>
+      <span class="go">Descargar CV</span>
+    </div>
+  </div>
+
+  <div class="band foot">
+    <div class="route"><span class="now">Obra</span><span>Trayectoria</span><span>Contacto</span></div>
+    <div class="next">ESCRÍBEME</div>
+  </div>
+</body>
+</html>

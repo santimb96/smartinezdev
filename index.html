@@ -3,20 +3,36 @@
 
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="color-scheme" content="light dark" />
+	<meta name="theme-color" content="#E4E7E1" media="(prefers-color-scheme: light)" />
+	<meta name="theme-color" content="#111511" media="(prefers-color-scheme: dark)" />
+	<script>
+		(function () {
+			try {
+				var saved = localStorage.getItem('color-scheme')
+				var scheme = saved === 'light' || saved === 'dark'
+					? saved
+					: (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+				document.documentElement.setAttribute('data-theme', scheme)
+				var themeColor = scheme === 'dark' ? '#111511' : '#E4E7E1'
+				Array.prototype.forEach.call(
+					document.querySelectorAll('meta[name="theme-color"]'),
+					function (meta) { meta.setAttribute('content', themeColor) }
+				)
+			} catch (error) { }
+		})()
+	</script>
 	<meta name="google-site-verification" content="kqv946WbkArJqELV7l6SUCgVLP2rVcYWi0hcMcgXU7c" />
 	<meta name="author" content="Santiago Martínez" />
 	<meta name="copyright" content="Santiago Martínez" />
 	<link rel="icon" type="image/svg+xml" href="/codeIcon.svg" />
-	<link rel="preload" href="/fonts/CooperBTLight.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="/fonts/MaisonNeue.woff2" as="font" type="font/woff2" crossorigin>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="color-scheme" content="light dark" />
-	<meta name="theme-color" content="#0f172a" />
+	<link rel="preload" href="/fonts/Archivo.woff2" as="font" type="font/woff2" crossorigin>
 	<title>Santiago Martínez - Desarrollador web</title>
 </head>
 
 <body>
-	<main id="app"></main>
+	<div id="app"></div>
 	<script prerender type="module" src="/src/index.jsx"></script>
 </body>
 

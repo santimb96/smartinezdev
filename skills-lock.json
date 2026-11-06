@@ -8,8 +8,9 @@
     },
     "frontend-design": {
       "source": "anthropics/skills",
-      "sourceType": "autoskills-registry",
-      "computedHash": "82fb11a63fb1e35ee2469516ed02d54695f783115b1540c0e783197af4240a3a"
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "89496d5dd00f4810205f351759594fc2742bf8eea85a2f2b2d1de59f4bd91576"
     },
     "nodejs-backend-patterns": {
       "source": "wshobson/agents",

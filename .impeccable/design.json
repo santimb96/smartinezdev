@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T17:20:00.000Z",
+  "title": "Design System: SmartinezDev",
+  "extensions": {
+    "colorMeta": {
+      "vellum": { "role": "neutral", "displayName": "Papel vellum", "canonical": "#E4E7E1", "tonalRamp": ["#0E120F", "#1B211C", "#2C332D", "#4A5149", "#6E756C", "#9DA49A", "#C7CCC4", "#E4E7E1"] },
+      "graphite": { "role": "neutral", "displayName": "Grafito", "canonical": "#151815", "tonalRamp": ["#151815", "#272B27", "#3C423C", "#565D56", "#737B73", "#98A098", "#C4CAC3", "#E7EAE4"] },
+      "graphite-soft": { "role": "neutral", "displayName": "Grafito suave", "canonical": "#59615A", "tonalRamp": ["#1B211C", "#2E352F", "#414941", "#59615A", "#7C857D", "#A4ACA4", "#CBD1CA", "#EDEFEA"] },
+      "hairline": { "role": "neutral", "displayName": "Filete", "canonical": "#B7BDB4", "tonalRamp": ["#2A302B", "#3F463F", "#5A625A", "#788078", "#9AA29A", "#B7BDB4", "#D5D9D2", "#F1F3EF"] },
+      "plate-ground": { "role": "neutral", "displayName": "Fondo de lámina", "canonical": "#D2D7CF", "tonalRamp": ["#202622", "#333A34", "#4C544C", "#6B736B", "#8F978F", "#B4BBB3", "#D2D7CF", "#F2F4F0"] },
+      "signal-blue": { "role": "primary", "displayName": "Cobalto de señal", "canonical": "#2545D6", "tonalRamp": ["#0A123F", "#122478", "#1B33A8", "#2545D6", "#5C74E4", "#93A4EF", "#C7D0F8", "#EDF0FD"] },
+      "signal-ink": { "role": "neutral", "displayName": "Tinta sobre señal", "canonical": "#F2F5F0", "tonalRamp": ["#242C25", "#3B443C", "#556055", "#77827A", "#9FA9A1", "#C4CCC5", "#E0E5DE", "#F2F5F0"] },
+      "vellum-dark": { "role": "neutral", "displayName": "Papel vellum nocturno", "canonical": "#111511", "tonalRamp": ["#111511", "#1A1F1A", "#252B25", "#343B34", "#485048", "#626B62", "#8A9289", "#B6BDB5"] },
+      "graphite-inverse": { "role": "neutral", "displayName": "Grafito inverso", "canonical": "#E7EAE4", "tonalRamp": ["#1B211C", "#2E352F", "#464E46", "#626B63", "#869086", "#AEB6AE", "#CED4CB", "#E7EAE4"] },
+      "signal-blue-dark": { "role": "primary", "displayName": "Cobalto nocturno", "canonical": "#8FA2FF", "tonalRamp": ["#101A3D", "#1B2A6B", "#2C41A3", "#4560D6", "#6B84F0", "#8FA2FF", "#BCC7FF", "#E6EBFF"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Sólo el nombre en el bloque de título." },
+      "headline": { "displayName": "Headline", "purpose": "Encabezados de sección y ficha destacada." },
+      "title": { "displayName": "Title", "purpose": "Roles de trayectoria y títulos de ficha." },
+      "body": { "displayName": "Body", "purpose": "Descripciones y párrafos, 62ch máximo." },
+      "label": { "displayName": "Label", "purpose": "Años, roles y stacks en especificaciones." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-state", "value": "ease", "purpose": "Transición de color de 150 ms en enlaces y botones." },
+      { "name": "rail-marker", "value": "scroll() linear", "purpose": "La marca de 2px del rail avanza con el scroll del documento." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "767px" },
+      { "name": "md", "value": "900px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "rail", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal de la hoja: descargar el CV.",
+      "html": "<button class=\"ds-btn-primary\">Descargar CV</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; background: #2545D6; color: #F2F5F0; border: 1px solid #2545D6; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 14px; letter-spacing: 0; cursor: pointer; transition: background 150ms ease, border-color 150ms ease; } .ds-btn-primary:hover { background: #151815; border-color: #151815; color: #E4E7E1; } .ds-btn-primary:focus-visible { outline: 2px solid #2545D6; outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Acción secundaria: escribir un correo.",
+      "html": "<button class=\"ds-btn\">Escríbeme</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; background: transparent; color: #151815; border: 1px solid #151815; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 14px; cursor: pointer; transition: background 150ms ease, color 150ms ease; } .ds-btn:hover { background: #151815; color: #E4E7E1; } .ds-btn:focus-visible { outline: 2px solid #2545D6; outline-offset: 3px; }"
+    },
+    {
+      "name": "Theme Toggle",
+      "kind": "button",
+      "refersTo": "theme-toggle",
+      "description": "Control circular de 34px que alterna claro y oscuro.",
+      "html": "<button class=\"ds-theme\" aria-label=\"Cambiar a modo oscuro\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"#151815\" stroke=\"#151815\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4\" fill=\"none\"/></svg></button>",
+      "css": ".ds-theme { width: 34px; height: 34px; display: grid; place-items: center; background: transparent; border: 1px solid #B7BDB4; border-radius: 999px; cursor: pointer; } .ds-theme:hover { border-color: #151815; } .ds-theme:focus-visible { outline: 2px solid #2545D6; outline-offset: 3px; }"
+    },
+    {
+      "name": "Project Plate",
+      "kind": "card",
+      "refersTo": "plate",
+      "description": "Fila de obra: captura a la izquierda y ficha de especificación a la derecha, separadas por filetes.",
+      "html": "<article class=\"ds-plate\"><div class=\"ds-plate-media\"></div><div><h3 class=\"ds-plate-title\">Ressò · Centre d'entrenament</h3><p class=\"ds-plate-desc\">Web del centro en Marratxí, en producción con Next.js.</p><dl class=\"ds-spec\"><div><dt>Rol</dt><dd>Full-stack</dd></div><div><dt>Stack</dt><dd>Next.js · React · Tailwind CSS</dd></div><div><dt>Estado</dt><dd>Finalizado</dd></div></dl></div></article>",
+      "css": ".ds-plate { display: grid; grid-template-columns: minmax(0, 460px) minmax(0, 1fr); gap: 56px; padding: 40px 0; border-top: 1px solid #B7BDB4; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; color: #151815; } .ds-plate-media { aspect-ratio: 605 / 340; background: #D2D7CF; border: 1px solid #B7BDB4; } .ds-plate-title { margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.02em; line-height: 1; } .ds-plate-desc { margin: 12px 0 0; font-size: 15px; line-height: 1.6; max-width: 54ch; } .ds-spec { margin-top: 18px; } .ds-spec div { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; padding: 7px 0; border-top: 1px solid #B7BDB4; font-size: 12.5px; } .ds-spec dt { color: #59615A; margin: 0; } .ds-spec dd { margin: 0; }"
+    },
+    {
+      "name": "Top Bar",
+      "kind": "nav",
+      "refersTo": "theme-toggle",
+      "description": "Barra superior fija con nombre, índice de secciones y control de tema.",
+      "html": "<header class=\"ds-topbar\"><span class=\"ds-topbar-name\">Santiago Martínez · SmartinezDev</span><nav class=\"ds-topbar-links\"><a href=\"#obra\" class=\"ds-topbar-link ds-topbar-link--active\">Obra</a><a href=\"#trayectoria\" class=\"ds-topbar-link\">Trayectoria</a><a href=\"#contacto\" class=\"ds-topbar-link\">Contacto</a></nav></header>",
+      "css": ".ds-topbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 64px; padding: 0 24px; background: #E4E7E1; border-bottom: 1px solid #151815; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; color: #151815; } .ds-topbar-name { font-size: 13px; font-weight: 600; } .ds-topbar-links { display: flex; gap: 22px; } .ds-topbar-link { font-size: 13px; color: #59615A; text-decoration: none; } .ds-topbar-link:hover { color: #151815; } .ds-topbar-link--active { color: #151815; box-shadow: inset 0 -1px 0 #151815; } .ds-topbar-link:focus-visible { outline: 2px solid #2545D6; outline-offset: 3px; }"
+    },
+    {
+      "name": "Measure (cota)",
+      "kind": "custom",
+      "refersTo": "plate",
+      "description": "Elemento firma: línea de 1px con ticks, años en los extremos y la leyenda de datos reales.",
+      "html": "<div class=\"ds-measure\"><p class=\"ds-measure-note\">5 años · 7 proyectos · 4 equipos</p><div class=\"ds-measure-line\"></div><div class=\"ds-measure-ends\"><span>2021</span><span>2026</span></div></div>",
+      "css": ".ds-measure { max-width: 640px; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums; } .ds-measure-note { margin: 0 0 10px; font-size: 13px; color: #59615A; } .ds-measure-line { position: relative; height: 1px; background: #151815; } .ds-measure-line::before, .ds-measure-line::after { content: \"\"; position: absolute; top: -6px; width: 1px; height: 13px; background: #151815; } .ds-measure-line::before { left: 0; } .ds-measure-line::after { right: 0; } .ds-measure-ends { display: flex; justify-content: space-between; margin-top: 10px; font-size: 12.5px; color: #59615A; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "La lámina de taller",
+    "overview": "El sitio es una lámina técnica medida: papel vellum, tinta de grafito y una sola tinta de señal. No hay tarjetas, sombras ni radios; la jerarquía la construyen las reglas de 1px, la escala tipográfica y la posición en la hoja. La evidencia —años, proyectos, stacks, estados— se dibuja y se tabula en lugar de declararse en adjetivos.",
+    "keyCharacteristics": [
+      "Papel vellum y grafito; el cobalto aparece sólo en acción y estado.",
+      "Reglas de 1px en lugar de tarjetas, sombras o radios.",
+      "Cifras tabulares en toda la hoja; todo dato numérico se alinea.",
+      "Un único movimiento: la marca del rail avanza con el scroll.",
+      "Contraste alto y tamaños legibles en mobile sin excepciones."
+    ],
+    "rules": [
+      { "name": "La regla de la única tinta", "body": "El cobalto cubre menos del 5% de cualquier pantalla. Su escasez es lo que lo vuelve legible como señal.", "section": "colors" },
+      { "name": "La regla del papel primero", "body": "Ninguna superficie se pinta de color para separar contenido: se separa con un filete de 1px.", "section": "colors" },
+      { "name": "La regla del dato alineado", "body": "Todo número —años, conteos, fechas— se compone con cifras tabulares y se alinea en columna.", "section": "typography" },
+      { "name": "La regla del tracking", "body": "El display no pasa de -0.04em; el cuerpo no baja de -0.006em.", "section": "typography" },
+      { "name": "La regla del plano", "body": "Si algo necesita separarse, se dibuja una línea; no se levanta del papel.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do reservar el cobalto para acción, foco y estado activo.",
+      "Do separar con filetes de 1px y mantener el sistema plano.",
+      "Do usar cifras tabulares y alinear los datos en columna.",
+      "Do escribir el año, el rol, el stack y el estado de cada proyecto.",
+      "Do mantener el foco visible de 2px en cobalto con offset de 3px."
+    ],
+    "donts": [
+      "Don't usar sombras, degradados, glass ni radios de tarjeta.",
+      "Don't poner etiquetas en mayúsculas sobre los encabezados.",
+      "Don't introducir una segunda familia tipográfica.",
+      "Don't usar el cobalto como fondo de sección ni como color de texto largo.",
+      "Don't pasar el display de -0.04em de tracking ni el cuerpo de 80 caracteres por línea."
+    ]
+  }
+}

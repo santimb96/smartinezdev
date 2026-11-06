@@ -68,7 +68,7 @@ const HOME_SEO = {
 
 const NOT_FOUND_SEO = {
   title: '404 | Página no encontrada | Santiago Martínez',
-  description: 'Página no encontrada en SmartinezDev. Volvé al inicio para ver experiencia, proyectos y contacto de Santiago Martínez.',
+  description: 'Página no encontrada en SmartinezDev. Vuelve al inicio para ver experiencia, proyectos y contacto de Santiago Martínez.',
   path: '/404',
   robots: 'noindex, follow',
   type: 'website',

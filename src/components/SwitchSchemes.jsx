@@ -1,28 +1,82 @@
 import { Moon, Sun } from 'lucide-preact'
 import { useEffect, useState } from 'preact/hooks'
 
-const SwicthSchemes = () => {
-  const [scheme, setScheme] = useState('light')
+const THEME_COLORS = { light: '#E4E7E1', dark: '#111511' }
+
+const storedScheme = () => {
+  if (typeof window === 'undefined') return null
+
+  const saved = window.localStorage.getItem('color-scheme')
+  return saved === 'light' || saved === 'dark' ? saved : null
+}
+
+const systemScheme = () => {
+  if (typeof window === 'undefined') return null
+
+  return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
+
+const applyScheme = (scheme) => {
+  document.documentElement.setAttribute('data-theme', scheme)
+  document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
+    meta.setAttribute('content', THEME_COLORS[scheme])
+  })
+}
+
+const SwitchSchemes = ({ compact = false }) => {
+  const [scheme, setScheme] = useState(() => {
+    if (typeof document === 'undefined') return 'light'
+
+    return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light'
+  })
 
   useEffect(() => {
-    const savedScheme = localStorage.getItem('color-scheme') || 'light'
-    setScheme(savedScheme)
-    document.documentElement.setAttribute('data-theme', savedScheme)
+    if (typeof window === 'undefined') return
+
+    const resolved = storedScheme() || systemScheme() || 'light'
+    setScheme(resolved)
+    applyScheme(resolved)
+
+    const media = window.matchMedia?.('(prefers-color-scheme: dark)')
+    if (!media) return
+
+    const onSystemChange = (event) => {
+      if (storedScheme()) return
+
+      const next = event.matches ? 'dark' : 'light'
+      setScheme(next)
+      applyScheme(next)
+    }
+
+    media.addEventListener('change', onSystemChange)
+    return () => media.removeEventListener('change', onSystemChange)
   }, [])
 
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', scheme)
-    localStorage.setItem('color-scheme', scheme)
-  }, [scheme])
-
   const toggleScheme = () => {
-    setScheme((prevscheme) => (prevscheme === 'light' ? 'dark' : 'light'))
+    const next = scheme === 'dark' ? 'light' : 'dark'
+
+    applyScheme(next)
+    window.localStorage.setItem('color-scheme', next)
+    setScheme(next)
   }
+
+  const label = scheme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'
+
+  if (compact) {
+    return (
+      <button type='button' onClick={toggleScheme} className='mobile-link' aria-label={label} title={label}>
+        Tema
+      </button>
+    )
+  }
+
   return (
-    <button onClick={toggleScheme} className={`min-w-10 p-3 border border-transparent rounded-full flex justify-center items-center lg:hover:border lg:hover:border-[var(--secondary)]/80 ${scheme === 'dark' ? 'lg:hover:backdrop-brightness-125' : 'lg:hover:backdrop-brightness-90'} group duration-150 ease-in-out`} aria-label='Cambiar modos de visualización' title={scheme === 'dark' ? 'Cambiar a modo claro' : 'cambiar a modo oscuro'}>
-      {scheme === 'dark' ? <Moon className='min-w-6 lg:group-hover:scale-125 duration-150 ease-in-out' fill='yellow' stroke='' strokeWidth={2} /> : <Sun className='min-w-6 lg:group-hover:scale-125 duration-150 ease-in-out' fill='orange' stroke='orange' strokeWidth={2} />}
+    <button type='button' onClick={toggleScheme} className='theme-toggle' aria-label={label} title={label}>
+      {scheme === 'dark'
+        ? <Moon className='theme-icon moon' strokeWidth={2} />
+        : <Sun className='theme-icon sun' strokeWidth={2} />}
     </button>
   )
 }
 
-export default SwicthSchemes
+export default SwitchSchemes

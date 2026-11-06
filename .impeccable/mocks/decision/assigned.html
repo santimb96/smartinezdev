@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1440px; height: 900px; overflow: hidden; }
+  body {
+    background: #E4E7E1; color: #151815;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: -0.01em;
+  }
+  .rail {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 72px;
+    border-right: 1px solid #151815;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 30px 0 26px; align-items: center;
+    font-size: 11px; letter-spacing: 0.06em; color: #59615A;
+  }
+  .rail b { color: #151815; font-weight: 700; }
+  .rail i { display: block; width: 9px; height: 1px; background: #59615A; }
+  .top {
+    position: absolute; left: 104px; right: 72px; top: 30px;
+    display: flex; justify-content: space-between;
+    font-size: 12px; color: #59615A; letter-spacing: 0.02em;
+  }
+  .top span:last-child { display: flex; gap: 18px; }
+  .title { position: absolute; left: 104px; top: 108px; width: 700px; }
+  h1 { font-size: 106px; line-height: 0.9; letter-spacing: -0.045em; font-weight: 800; }
+  .role { margin-top: 22px; font-size: 21px; color: #151815; }
+  .state { margin-top: 14px; display: flex; align-items: center; gap: 9px; font-size: 14px; color: #2545D6; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: #2545D6; }
+  .measure { position: absolute; left: 104px; top: 402px; width: 700px; }
+  .measure .bar { position: relative; height: 1px; background: #151815; margin: 26px 0 12px; }
+  .measure .bar::before, .measure .bar::after {
+    content: ""; position: absolute; top: -5px; width: 1px; height: 11px; background: #151815;
+  }
+  .measure .bar::before { left: 0; }
+  .measure .bar::after { right: 0; }
+  .measure .ends { display: flex; justify-content: space-between; font-size: 13px; color: #59615A; }
+  .measure .label { font-size: 15px; font-weight: 700; }
+  .measure .sub { margin-top: 6px; font-size: 13px; color: #59615A; }
+  .actions { position: absolute; left: 104px; top: 512px; display: flex; gap: 12px; }
+  .btn {
+    font-size: 14px; padding: 13px 22px; border: 1px solid #151815;
+    color: #151815; background: transparent;
+  }
+  .btn.primary { background: #2545D6; border-color: #2545D6; color: #F2F5F0; }
+  .portrait {
+    position: absolute; right: 72px; top: 108px; width: 372px;
+  }
+  .portrait .plate {
+    height: 440px; border: 1px solid #151815;
+    background: repeating-linear-gradient(135deg, #D3D8D1 0 10px, #CBD1CA 10px 20px);
+  }
+  .portrait .cap {
+    margin-top: 10px; padding-top: 8px; border-top: 1px solid #151815;
+    display: flex; justify-content: space-between; font-size: 11px; color: #59615A;
+  }
+  .next {
+    position: absolute; left: 104px; right: 72px; top: 640px;
+    border-top: 1px solid #151815; padding-top: 22px;
+    display: grid; grid-template-columns: 420px 1fr; gap: 40px;
+  }
+  .shot { height: 218px; border: 1px solid #151815; background: repeating-linear-gradient(0deg, #D3D8D1 0 12px, #CDD3CC 12px 24px); }
+  .spec h2 { font-size: 26px; letter-spacing: -0.02em; }
+  .spec p { font-size: 13px; color: #59615A; margin-top: 6px; }
+  .spec table { margin-top: 18px; width: 100%; border-collapse: collapse; font-size: 13px; }
+  .spec td { padding: 7px 0; border-top: 1px solid #B9BFB7; }
+  .spec td:first-child { width: 120px; color: #59615A; }
+  .spec a { color: #2545D6; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="rail">
+    <span><b>2026</b></span><i></i>
+    <span><b>2025</b></span>
+    <span>2024</span>
+    <span>2023</span>
+    <span>2022</span>
+    <span><b>2021</b></span>
+  </div>
+
+  <div class="top">
+    <span>Santiago Martínez · SmartinezDev</span>
+    <span><span>ES</span><span>Tema</span></span>
+  </div>
+
+  <div class="title">
+    <h1>Santiago<br>Martínez</h1>
+    <div class="role">Desarrollador full-stack · Diseño de interfaces</div>
+    <div class="state"><span class="dot"></span> Disponible · Mallorca</div>
+  </div>
+
+  <div class="measure">
+    <div class="label">2021 ─ 2026</div>
+    <div class="bar"></div>
+    <div class="ends"><span>2021</span><span>2026</span></div>
+    <div class="sub">5 años · 7 proyectos · 4 equipos</div>
+  </div>
+
+  <div class="actions">
+    <span class="btn primary">Descargar CV</span>
+    <span class="btn">Escríbeme</span>
+  </div>
+
+  <div class="portrait">
+    <div class="plate"></div>
+    <div class="cap"><span>Retrato · 2026</span><span>01</span></div>
+  </div>
+
+  <div class="next">
+    <div>
+      <div class="shot"></div>
+      <div class="cap" style="display:flex;justify-content:space-between;font-size:11px;color:#59615A;margin-top:8px;padding-top:8px;border-top:1px solid #151815"><span>Ressò · Centre d'entrenament</span><span>Ver sitio</span></div>
+    </div>
+    <div class="spec">
+      <h2>Ressò · Centre d'entrenament</h2>
+      <p>Web del centro, Marratxí. Next.js en producción.</p>
+      <table>
+        <tr><td>Año</td><td>2025</td></tr>
+        <tr><td>Rol</td><td>Full-stack</td></tr>
+        <tr><td>Stack</td><td>Next.js · React · Tailwind CSS</td></tr>
+        <tr><td>Estado</td><td>Finalizado</td></tr>
+        <tr><td>Enlace</td><td><a>Ver sitio</a></td></tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1440px; height: 900px; overflow: hidden; }
+  body {
+    background: #D8CFB8; color: #1C1914;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 0;
+  }
+  .ribbon { position: absolute; left: 0; top: 0; width: 220px; height: 900px; }
+  .ribbon svg { width: 220px; height: 900px; }
+  .head { position: absolute; left: 268px; top: 52px; right: 84px; display: flex; justify-content: space-between; align-items: flex-start; }
+  .kicker { font-size: 11px; letter-spacing: 0.2em; color: #6E6552; font-family: "Helvetica Neue", Arial, sans-serif; }
+  h1 { font-size: 74px; line-height: 0.94; letter-spacing: -0.03em; margin-top: 10px; font-weight: 400; }
+  .role { margin-top: 12px; font-size: 17px; color: #4A4335; font-style: italic; }
+  .seal { width: 96px; height: 96px; border-radius: 50%; border: 1px solid #9E2B25; color: #9E2B25; display: grid; place-items: center; text-align: center; font-size: 10px; letter-spacing: 0.12em; line-height: 1.4; font-family: "Helvetica Neue", Arial, sans-serif; }
+  .ledger { position: absolute; left: 268px; right: 84px; top: 268px; display: grid; grid-template-columns: 1fr 470px; gap: 44px; }
+  .shot { height: 268px; border: 1px solid #1C1914; background: repeating-linear-gradient(0deg, #CFC6AE 0 13px, #C7BEA6 13px 26px); }
+  .cap { margin-top: 9px; padding-top: 7px; border-top: 1px solid #1C1914; font-size: 12px; color: #4A4335; display: flex; justify-content: space-between; }
+  .ex h2 { font-size: 32px; letter-spacing: -0.02em; font-weight: 400; }
+  .ex .dated { margin-top: 6px; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10px; letter-spacing: 0.18em; color: #6E6552; }
+  .ex p { margin-top: 12px; font-size: 15px; line-height: 1.6; color: #332E25; }
+  .ex .facts { margin-top: 14px; font-size: 12px; font-family: "Helvetica Neue", Arial, sans-serif; }
+  .ex .facts div { display: flex; justify-content: space-between; padding: 7px 0; border-top: 1px solid #BDB39A; }
+  .ex .facts span:first-child { color: #6E6552; }
+  .ex .live { color: #9E2B25; font-weight: 700; }
+  .actions { position: absolute; left: 268px; top: 700px; display: flex; gap: 12px; }
+  .btn { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 12px; letter-spacing: 0.06em; padding: 11px 18px; border: 1px solid #1C1914; }
+  .btn.primary { background: #1C1914; color: #D8CFB8; }
+  .foot { position: absolute; left: 268px; right: 84px; bottom: 44px; display: flex; justify-content: space-between; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; letter-spacing: 0.12em; color: #6E6552; }
+  .foot b { color: #1C1914; }
+</style>
+</head>
+<body>
+  <div class="ribbon">
+    <svg viewBox="0 0 220 900" preserveAspectRatio="none">
+      <path d="M120 -20 C 120 120, 96 170, 96 250 C 96 330, 132 360, 132 440 C 132 520, 92 552, 92 640 C 92 720, 120 760, 120 920"
+            fill="none" stroke="#9E2B25" stroke-width="26" stroke-linecap="round"/>
+      <g stroke="#8C8C86" stroke-width="6" stroke-dasharray="2 12" fill="none">
+        <path d="M96 250 C 96 300, 110 320, 120 340"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="head">
+    <div>
+      <div class="kicker">PROCEDENCIA · 2021—2026</div>
+      <h1>Santiago<br>Martínez</h1>
+      <div class="role">Desarrollador full-stack · Diseño de interfaces</div>
+    </div>
+    <div class="seal">DISPONIBLE<br>2026</div>
+  </div>
+
+  <div class="ledger">
+    <div>
+      <div class="shot"></div>
+      <div class="cap"><span>Ressò · Centre d'entrenament</span><span>2025</span></div>
+    </div>
+    <div class="ex">
+      <h2>Ressò · Centre d'entrenament</h2>
+      <div class="dated">CUSTODIA · 2025 · MARRATXÍ</div>
+      <p>Web del centro: gimnasio, entrenos personales y seminarios. Next.js en producción, preparada para escalar y migrar datos.</p>
+      <div class="facts">
+        <div><span>Rol</span><span>Full-stack</span></div>
+        <div><span>Stack</span><span>Next.js · React · Tailwind</span></div>
+        <div><span>Estado</span><span>Finalizado</span></div>
+        <div><span>Enlace</span><span class="live">Ver sitio</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <span class="btn primary">Descargar CV</span>
+    <span class="btn">Escríbeme</span>
+  </div>
+
+  <div class="foot">
+    <span><b>Ahora</b> · Obra · Trayectoria · Contacto</span>
+    <span>Santiago Martínez · SmartinezDev</span>
+  </div>
+</body>
+</html>

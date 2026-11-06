@@ -1,68 +1,88 @@
-import { Copy, CopyCheck, Mail, Github } from 'lucide-preact'
+import { Copy, CopyCheck, Mail, Github, ArrowDownToLine } from 'lucide-preact'
+import { useEffect, useRef, useState } from 'preact/hooks'
 import LinkedInIcon from '../icons/LinkedInIcon.jsx'
-import { useState } from 'preact/hooks'
+
+const EMAIL = 'santiagomartinezbota@gmail.com'
 
 const Contact = () => {
-    const [copied, setCopied] = useState(false)
-    const copyToClipboard = async () => {
-        try {
-            await navigator.clipboard.writeText('santiagomartinezbota@gmail.com')
-            setCopied(true)
-            setTimeout(() => setCopied(false), 2000)
-        } catch (error) {
-            console.error('Error al copiar al portapapeles:', error)
-        }
+  const [copyState, setCopyState] = useState('idle')
+  const resetTimer = useRef(null)
+
+  useEffect(() => {
+    return () => {
+      if (resetTimer.current) clearTimeout(resetTimer.current)
     }
-    return (
-        <section id='contact' className='w-full scroll-m-20 pb-[10px]'>
-            <h2 className='scroll-m-20 pb-2.5 self-start mb-[5px] flex flex-row justify-start items-center gap-2.5'>
-                <Mail className='min-w-[26px]' strokeWidth={2} />
-                Contacto
-            </h2>
-            <div className='w-full flex-wrap lg:flex-nowrap flex flex-col justify-start items-start gap-2.5 lg:flex-row'>
-                <div className='w-full lg:w-3/4 flex flex-col justify-start items-start gap-2.5'>
-                    <p>¡Ponte en contacto conmigo por cualquiera de las siguientes vías!</p>
-                    <button type='button' onClick={copyToClipboard} aria-label='Copiar correo electrónico de Santiago Martínez' className={`copyMailButton mt-2.5 group transition-all duration-300 ease-in-out cursor-pointer flex justify-start items-center gap-5 lg:mb-5 lg:w-full rounded-full ${copied ? 'text-[var(--detail)]' : ''}`}>
-                        <span className={`group-hover:text-[var(--detail)] group-hover:scale-105 transition-all`}>santiagomartinezbota@gmail.com</span>
-                        <span className={`group-hover:text-[var(--detail)] group-hover:scale-110 transition-all lucideIcon relative`}>
-                            {copied ? <CopyCheck strokeWidth={2} /> : <Copy strokeWidth={2} />}
-                            {copied && <small className='absolute bottom-7 -right-5 min-w-full bg-[var(--detail)] text-[var(--primary)] rounded-full px-1 text-[10px] z-10 duration-150 ease-in-out'>¡Copiado!</small>}
-                        </span>
-                    </button>
-                </div>
-                <div className='flex justify-start items-start lg:flex-col gap-2.5 flex-wrap lg:w-1/2 mt-5 lg:mt-0'>
-                    <a href='mailto:santiagomartinezbota@gmail.com' target='_blank' rel='noreferrer' aria-label='Enviar correo a Santiago Martínez' className='buttonLink flex justify-start items-center gap-5 lg:w-full'>
-                        <span className='lucideIcon'>
-                            <Mail strokeWidth={2} />
-                        </span>
-                        <span>Correo electrónico</span>
-                    </a>
-                    <a href='https://www.linkedin.com/in/santi-martinez-bota/' target='_blank' rel='noreferrer' aria-label='Ver perfil de LinkedIn de Santiago Martínez' className='buttonLink lg:w-full'>
-                        <span className='lucideIcon'>
-                            <LinkedInIcon strokeWidth={2} />
-                        </span>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href='https://github.com/santimb96' target='_blank' rel='noreferrer' aria-label='Ver perfil de GitHub de Santiago Martínez' className='buttonLink lg:w-full'>
-                        <span className='lucideIcon'>
-                            <Github strokeWidth={2} />
-                        </span>
-                        <span>GitHub</span>
-                    </a>
-                </div>
-            </div>
-            <div className='mt-20 w-full flex flex-col justify-center items-center'>
-                <p className='text-center w-full md:w-3/4 lg:w-1/2'>
-                    ¿Te ha gustado mi portfolio? Sería de gran ayuda que lo compartas con tu circulo de contactos. ¡Muchísimas gracias!
-                </p>
-                <div className='mt-5 flex justify-center items-center gap-5'>
-                    <a href="https://www.linkedin.com/shareArticle?url=https://smartinezdev.com&title=Portfolio%20de%20Santiago%20Martínez&summary=Un%20portfolio%20desarrollado%20con%20ReactJS%20y%20TailwindCSS.&source=SmartinezDev" target="_blank" rel='noreferrer' aria-label='Compartir portfolio en LinkedIn' className='min-w-6 hover:text-[var(--detail)] duration-150 ease-in-out'>
-                        <LinkedInIcon width='36px' height='36px' />
-                    </a>
-                </div>
-            </div>
-        </section>
-    )
+  }, [])
+
+  const scheduleReset = (delay) => {
+    if (resetTimer.current) clearTimeout(resetTimer.current)
+    resetTimer.current = setTimeout(() => setCopyState('idle'), delay)
+  }
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL)
+      setCopyState('copied')
+      scheduleReset(2200)
+    } catch (error) {
+      console.error('No se pudo copiar el correo:', error)
+      setCopyState('error')
+      scheduleReset(3200)
+    }
+  }
+
+  return (
+    <section id='contacto' className='band'>
+      <div className='band-head'>
+        <h2 className='band-title'>Contacto</h2>
+        <span className='band-meta'>Mallorca · España</span>
+      </div>
+
+      <div className='contact-grid'>
+        <div>
+          <p className='contact-line'>¿Hablemos?</p>
+          <p className='contact-soft'>
+            Estoy disponible para entrevistas y proyectos. Cuéntame qué necesitas
+            y te responderé con una propuesta concreta.
+          </p>
+          <button
+            type='button'
+            className='copy-mail'
+            onClick={copyToClipboard}
+            aria-label={`Copiar el correo ${EMAIL}`}
+          >
+            {EMAIL}
+            {copyState === 'copied'
+              ? <CopyCheck size={17} strokeWidth={2} aria-hidden='true' />
+              : <Copy size={17} strokeWidth={2} aria-hidden='true' />}
+          </button>
+          <p className='copy-status' role='status'>
+            {copyState === 'copied' && 'Correo copiado.'}
+            {copyState === 'error' && 'No se pudo copiar. Selecciónalo y cópialo manualmente.'}
+          </p>
+        </div>
+
+        <div className='contact-links'>
+          <a href={`mailto:${EMAIL}`} aria-label='Escribir un correo a Santiago Martínez'>
+            Correo
+            <Mail size={16} strokeWidth={2} aria-hidden='true' />
+          </a>
+          <a href='https://www.linkedin.com/in/santi-martinez-bota/' target='_blank' rel='noreferrer' aria-label='Ver el perfil de LinkedIn de Santiago Martínez'>
+            LinkedIn
+            <LinkedInIcon width='16' height='16' />
+          </a>
+          <a href='https://github.com/santimb96' target='_blank' rel='noreferrer' aria-label='Ver el perfil de GitHub de Santiago Martínez'>
+            GitHub
+            <Github size={16} strokeWidth={2} aria-hidden='true' />
+          </a>
+          <a href='/documents/cv_santiago_martinez.pdf' download='cv_santiago_martinez.pdf' aria-label='Descargar el CV en PDF'>
+            CV en PDF
+            <ArrowDownToLine size={16} strokeWidth={2} aria-hidden='true' />
+          </a>
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default Contact

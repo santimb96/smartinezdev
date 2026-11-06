@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1440px; height: 900px; overflow: hidden; }
+  body {
+    background: #FFFFFF; color: #111827;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: -0.015em;
+  }
+  .nav { height: 76px; display: flex; align-items: center; justify-content: space-between; padding: 0 64px; border-bottom: 1px solid #ECEEF2; }
+  .nav .brand { font-weight: 700; font-size: 15px; }
+  .nav .links { display: flex; gap: 30px; font-size: 14px; color: #4B5563; }
+  .nav .cta { background: #2563EB; color: #fff; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+  .hero { padding: 74px 64px 0; display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: center; }
+  .hero h1 { font-size: 72px; line-height: 1; letter-spacing: -0.045em; }
+  .hero .role { margin-top: 16px; font-size: 19px; color: #4B5563; }
+  .hero p { margin-top: 18px; font-size: 15px; line-height: 1.65; color: #6B7280; max-width: 48ch; }
+  .hero .btns { margin-top: 28px; display: flex; gap: 12px; }
+  .btn { padding: 13px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; border: 1px solid #D1D5DB; color: #111827; }
+  .btn.primary { background: #2563EB; border-color: #2563EB; color: #fff; }
+  .portrait { height: 300px; border-radius: 14px; background: #E5E7EB; border: 1px solid #E5E7EB; }
+  .cards { padding: 54px 64px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { border: 1px solid #E5E7EB; border-radius: 14px; overflow: hidden; }
+  .card .thumb { height: 150px; background: repeating-linear-gradient(0deg, #F1F3F6 0 12px, #E9ECF1 12px 24px); }
+  .card .body { padding: 16px 18px 18px; }
+  .card h3 { font-size: 16px; }
+  .card p { margin-top: 6px; font-size: 13px; color: #6B7280; line-height: 1.5; }
+  .tags { margin-top: 12px; display: flex; gap: 6px; }
+  .tag { font-size: 11px; background: #F3F4F6; color: #4B5563; padding: 3px 8px; border-radius: 999px; }
+</style>
+</head>
+<body>
+  <div class="nav">
+    <span class="brand">Santiago Martínez</span>
+    <span class="links"><span>Sobre mí</span><span>Proyectos</span><span>Experiencia</span><span>Contacto</span></span>
+    <span class="cta">Escríbeme</span>
+  </div>
+
+  <div class="hero">
+    <div>
+      <h1>Desarrollador full-stack<br>con ojo de diseñador.</h1>
+      <div class="role">Santiago Martínez · Mallorca, España</div>
+      <p>Cinco años construyendo interfaces y productos completos para clientes reales: un centro de entrenamiento en Marratxí, herramientas documentales para investigación, aplicaciones de punta a punta.</p>
+      <div class="btns"><span class="btn primary">Descargar CV</span><span class="btn">Ver proyectos</span></div>
+    </div>
+    <div class="portrait"></div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="thumb"></div>
+      <div class="body">
+        <h3>Ressò · Centre d'entrenament</h3>
+        <p>Sitio del centro en producción, con Next.js y Tailwind.</p>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">Tailwind</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"></div>
+      <div class="body">
+        <h3>Docmark</h3>
+        <p>Gestión documental para Atalis Funding, con React y Rails.</p>
+        <div class="tags"><span class="tag">React</span><span class="tag">Rails</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"></div>
+      <div class="body">
+        <h3>TMDB movie app</h3>
+        <p>Búsqueda de series y películas con favoritos y paginado.</p>
+        <div class="tags"><span class="tag">React</span><span class="tag">API REST</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

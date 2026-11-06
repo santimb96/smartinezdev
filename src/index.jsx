@@ -1,18 +1,22 @@
 import { hydrate, prerender as ssr, Router, Route, LocationProvider } from 'preact-iso'
-import Layout from './components/Layout'
-import Navbar from './components/Navbar'
-import Header from './components/Header'
-import Experience from './components/Experience'
-import Divider from './components/globals/Divider'
-import Projects from './components/Projects'
-import Footer from './components/Footer'
-import ScrollToTop from './components/globals/ScrollToTop'
+import Rail from './components/Rail'
+import TopBar from './components/TopBar'
+import TitleBlock from './components/TitleBlock'
+import Work from './components/Work'
+import Timeline from './components/Timeline'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
+import MobileNav from './components/MobileNav'
 import NotFound from './components/NotFound'
+import { PROJECTS, EXPERIENCE } from './constants/vars'
 import { HOME_SEO, resetSeoState, usePageSeo } from './seo'
 import './style.css'
 
 const STATIC_ASSET_PATTERN = /\.(pdf|png|jpe?g|webp|gif|svg|ico|woff2?|ttf|eot|mp4|webm|mp3|wav|zip)$/i
+
+// Only the canonical route is handled client-side. Asset links (the CV PDF)
+// must keep their native download behavior instead of being intercepted.
+const CLIENT_ROUTE_PATTERN = /^\/$/
 
 const filterPrerenderLinks = (links) => {
   if (!links) return links
@@ -27,7 +31,7 @@ const filterPrerenderLinks = (links) => {
 
 export function App () {
   return (
-    <LocationProvider scope='/app'>
+    <LocationProvider scope={CLIENT_ROUTE_PATTERN}>
       <Router>
         <Route path='/' component={WebApp} />
         <Route default component={NotFound} />
@@ -41,17 +45,19 @@ function WebApp () {
 
   return (
     <>
-      <Layout>
-        <Navbar />
-        <Header />
-        <Divider />
-        <Experience />
-        <Divider />
-        <Projects />
-        <Contact />
-      </Layout>
+      <a href='#contenido' className='skip-link'>Saltar al contenido</a>
+      <Rail />
+      <TopBar />
+      <main id='contenido'>
+        <div className='sheet'>
+          <TitleBlock projectCount={PROJECTS.length} teamCount={EXPERIENCE.length} />
+          <Work />
+          <Timeline />
+          <Contact />
+        </div>
+      </main>
       <Footer />
-      <ScrollToTop />
+      <MobileNav />
     </>
   )
 }

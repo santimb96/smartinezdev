@@ -4,11 +4,16 @@ const NotFound = () => {
   usePageSeo('/404')
 
   return (
-    <div className='flex flex-col justify-center items-center h-[100dvh] gap-5 text-center text-pretty p-5'>
-      <h1 className='text-[2.5rem]'>404 | Página no encontrada</h1>
-      <h2 className='text-[1.5rem]'>Lo siento pero la página que estás buscando no existe o no está disponible.</h2>
-      <a href='/' className='buttonLink mt-5'>Volver al inicio</a>
-    </div>
+    <main id='contenido' className='sheet' style={{ paddingTop: '96px', paddingBottom: '96px' }}>
+      <p className='measure-note'>Error 404</p>
+      <h1 className='title-name' style={{ fontSize: 'clamp(44px, 6vw, 72px)' }}>
+        Página no<br />encontrada
+      </h1>
+      <p className='lede'>La página que buscas no existe o ha dejado de estar disponible.</p>
+      <p style={{ marginTop: '32px' }}>
+        <a className='btn btn-primary' href='/'>Volver al inicio</a>
+      </p>
+    </main>
   )
 }
 
