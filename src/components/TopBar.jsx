@@ -8,7 +8,7 @@ const TopBar = () => {
   return (
     <header className='topbar'>
       <div className='sheet topbar-inner'>
-        <a className='topbar-name' href='#ahora'>Santiago Martínez · SmartinezDev</a>
+        <a className='topbar-name' href='#perfil'>Santiago Martínez · SmartinezDev</a>
         <div className='topbar-right'>
           <nav aria-label='Secciones' className='topbar-links'>
             {LINKS.map(({ link, title }) => (

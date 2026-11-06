@@ -7,7 +7,7 @@ const YEARS = Math.max(1, YEAR - START_YEAR)
 
 const TitleBlock = ({ projectCount, teamCount }) => {
   return (
-    <section id='ahora' className='title-block'>
+    <section id='perfil' className='title-block'>
       <div>
         <h1 className='title-name'>Santiago<br />Martínez</h1>
         <p className='title-role'>Desarrollador full-stack · Diseño de interfaces</p>
@@ -57,10 +57,6 @@ const TitleBlock = ({ projectCount, teamCount }) => {
             alt='Retrato de Santiago Martínez'
           />
         </div>
-        <figcaption>
-          <span>Retrato · {YEAR}</span>
-          <span>Lámina 01</span>
-        </figcaption>
       </figure>
     </section>
   )

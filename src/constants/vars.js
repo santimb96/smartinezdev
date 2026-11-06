@@ -1,6 +1,6 @@
 const LINKS = [
-  { link: '#ahora', title: 'Ahora' },
-  { link: '#obra', title: 'Obra' },
+  { link: '#perfil', title: 'Perfil' },
+  { link: '#proyectos', title: 'Proyectos' },
   { link: '#trayectoria', title: 'Trayectoria' },
   { link: '#contacto', title: 'Contacto' }
 ]
@@ -45,6 +45,7 @@ const EXPERIENCE = [
 const PROJECTS = [
   {
     name: 'Ressò · Centre d\'entrenament',
+    caption: 'Landing del centro de entrenamiento',
     area: 'Full-stack',
     date: '2025-06-11',
     img: '/img/projects/resso-centre-entrenament.webp',
@@ -55,6 +56,7 @@ const PROJECTS = [
   },
   {
     name: 'Docmark',
+    caption: 'Herramienta documental para investigación',
     area: 'Full-stack',
     date: '2025-04-11',
     img: '/img/projects/dummy.webp',
@@ -65,6 +67,7 @@ const PROJECTS = [
   },
   {
     name: 'TMDB movie app',
+    caption: 'Buscador de películas y series',
     area: 'Front-end',
     date: '2023-03-11',
     img: '/img/projects/tmdbApp.webp',
@@ -75,6 +78,7 @@ const PROJECTS = [
   },
   {
     name: 'Clon de Spotify',
+    caption: 'Reproductor de música en streaming',
     area: 'Full-stack',
     date: '2022-06-14',
     img: '/img/projects/spoticlone.webp',
@@ -85,6 +89,7 @@ const PROJECTS = [
   },
   {
     name: 'Scrapping TV3/SX3',
+    caption: 'Script de extracción de contenido',
     area: 'Script',
     date: '2022-10-14',
     img: '/img/projects/sx3Scrapping.webp',
@@ -95,6 +100,7 @@ const PROJECTS = [
   },
   {
     name: 'PokeDuel',
+    caption: 'Videojuego de combates por rondas',
     area: 'Full-stack',
     date: '2022-07-14',
     img: '/img/projects/pokeduel.webp',
@@ -105,6 +111,7 @@ const PROJECTS = [
   },
   {
     name: 'Palmimax',
+    caption: 'App de cine en local',
     area: 'Front-end',
     date: '2021-11-14',
     img: '/img/projects/palmimax.webp',

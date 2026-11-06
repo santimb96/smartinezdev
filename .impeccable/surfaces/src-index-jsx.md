@@ -24,7 +24,7 @@ OWN-WORLD: Papel vellum #E4E7E1, grafito #151815, anotación #59615A, un cobalto
 
 STORY: El visitante entiende quién es, qué nivel tiene, dónde está y que está disponible sin scrollear; después ve la obra con evidencia y llega al contacto en un clic.
 
-FIRST VIEWPORT: Bloque de título a sangre. Rail izquierdo de 104px con el índice medido de la sección (cada entrada a su altura real en el documento) y una marca vertical de 2px que avanza con el scroll. Nombre en dos o tres líneas a 96–106px. Rol y estado debajo. Cota horizontal con ticks y la leyenda «5 años · 7 proyectos · 4 equipos». Retrato en blanco y negro como lámina con pie. Dos acciones: CV (sólido cobalto) y Escríbeme (contorno).
+FIRST VIEWPORT: Bloque de título a sangre. Rail izquierdo de 104px con el índice medido de la sección (cada entrada a su altura real en el documento) y una marca vertical de 2px que avanza con el scroll. Nombre en dos o tres líneas a 96–106px. Rol y estado debajo. Cota horizontal con ticks y la leyenda «5 años · 7 proyectos · 4 equipos». Retrato en blanco y negro como lámina, sin pie. Dos acciones: CV (sólido grafito) y Escríbeme (contorno).
 
 FORM: Lámina de taller, candidata 3 de mi lista ordenada; seed:77aca8a781004d29.
 

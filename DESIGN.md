@@ -99,7 +99,7 @@ El sitio es una lámina técnica medida: papel vellum, tinta de grafito y una so
 
 La hoja se lee de arriba a abajo como un plano: bloque de título, secciones con encabezado y filete, fichas de especificación y un bloque de revisión al pie. El rail izquierdo es el índice medido de la lámina: cada sección aparece a la altura real que ocupa en el documento y una marca de 2px indica dónde está el visitante. En mobile el rail desaparece y el índice baja a una barra fija de cinco celdas.
 
-La densidad es deliberada: el visitante que llega desde un link ve nombre, rol, estado, medida y acciones sin scrollear, y la obra empieza inmediatamente después. El retrato es una lámina con pie de foto, no un avatar.
+La densidad es deliberada: el visitante que llega desde un link ve nombre, rol, estado, medida y acciones sin scrollear, y los proyectos empiezan inmediatamente después. El retrato es una lámina sin pie, no un avatar.
 
 **Key Characteristics:**
 - Papel vellum y grafito; el petróleo aparece sólo en acción y estado.

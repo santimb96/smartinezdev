@@ -1,4 +1,4 @@
-import { Github, Globe, Lock } from 'lucide-preact'
+import { Github, ArrowUpRight, Lock } from 'lucide-preact'
 import { PROJECTS } from '../constants/vars'
 
 const EMPHASIS = /<i>(.+?)<\/i>/g
@@ -29,9 +29,9 @@ const sorted = [...PROJECTS].sort((a, b) => b.date.localeCompare(a.date))
 
 const Work = () => {
   return (
-    <section id='obra' className='band'>
+    <section id='proyectos' className='band'>
       <div className='band-head'>
-        <h2 className='band-title'>Obra</h2>
+        <h2 className='band-title'>Proyectos</h2>
         <span className='band-meta'>{sorted.length} proyectos · 2021—2026</span>
       </div>
       <p className='lede'>
@@ -49,7 +49,7 @@ const Work = () => {
 }
 
 const Plate = ({ project, index, featured }) => {
-  const { name, area, date, img, deployment, repository, description, stack } = project
+  const { name, area, date, img, deployment, repository, description, stack, caption } = project
   const finished = new Date() > parseDate(date)
   const primaryLink = deployment || repository
   const image = (
@@ -75,14 +75,18 @@ const Plate = ({ project, index, featured }) => {
           : (
             <div className='plate-media'>{image}</div>
             )}
-        <div className='plate-caption'>
-          <span>Ficha {String(index + 1).padStart(2, '0')}</span>
+        <p className='plate-caption'>
+          <span>{caption}</span>
           <span>{yearOf(date)}</span>
-        </div>
+        </p>
       </div>
 
       <div>
-        <h3 className='plate-title'>{name}</h3>
+        <h3 className='plate-title'>
+          {primaryLink
+            ? <a href={primaryLink} target='_blank' rel='noreferrer'>{name}</a>
+            : name}
+        </h3>
         <p className='plate-desc'>{renderEmphasis(description)}</p>
 
         <dl className='spec'>
@@ -93,18 +97,20 @@ const Plate = ({ project, index, featured }) => {
 
         {deployment || repository
           ? (
-            <p style={{ display: 'flex', gap: '18px', marginTop: '16px' }}>
+            <div className='spec-links'>
               {deployment && (
                 <a className='spec-link' href={deployment} target='_blank' rel='noreferrer'>
-                  <Globe size={13} strokeWidth={2} aria-hidden='true' /> Ver sitio
+                  <ArrowUpRight size={14} strokeWidth={2} aria-hidden='true' />
+                  <span>Ver sitio</span>
                 </a>
               )}
               {repository && (
                 <a className='spec-link' href={repository} target='_blank' rel='noreferrer'>
-                  <Github size={13} strokeWidth={2} aria-hidden='true' /> Repositorio
+                  <Github size={14} strokeWidth={2} aria-hidden='true' />
+                  <span>Repositorio</span>
                 </a>
               )}
-            </p>
+            </div>
             )
           : (
             <p className='plate-note'>
