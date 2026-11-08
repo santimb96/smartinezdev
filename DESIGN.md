@@ -5,14 +5,14 @@ colors:
   vellum: "#E4E7E1"
   graphite: "#151815"
   graphite-soft: "#59615A"
-  hairline: "#B7BDB4"
+  hairline: "#8C948C"
   plate-ground: "#D2D7CF"
   signal-petrol: "#17544A"
   signal-ink: "#F2F5F0"
   vellum-dark: "#111511"
   graphite-inverse: "#E7EAE4"
   graphite-soft-dark: "#9AA39B"
-  hairline-dark: "#333A34"
+  hairline-dark: "#4F5A52"
   plate-ground-dark: "#1B211C"
   signal-petrol-dark: "#7FC0AE"
 typography:
@@ -119,7 +119,7 @@ Paleta de dos tintas más una señal: el papel y el grafito hacen todo el trabaj
 - **Papel vellum** (#E4E7E1 / #111511): fondo de la hoja y de la barra superior. En oscuro el papel se vuelve casi negro verdoso, no gris.
 - **Grafito** (#151815 / #E7EAE4): texto, filetes de 1px y bordes de lámina.
 - **Grafito suave** (#59615A / #9AA39B): anotaciones, metadatos, pies de figura y etiquetas de especificación.
-- **Filete** (#B7BDB4 / #333A34): separadores entre fichas y filas de especificación.
+- **Filete** (#8C948C / #4F5A52): separadores entre fichas y filas de especificación. Se mantiene por encima de 2,5:1 sobre el papel para que las tablas de datos sigan leyéndose en pantallas luminosas y en proyección.
 - **Fondo de lámina** (#D2D7CF / #1B211C): relleno detrás de capturas e imágenes mientras cargan.
 
 ### Named Rules
@@ -139,7 +139,7 @@ Paleta de dos tintas más una señal: el papel y el grafito hacen todo el trabaj
 - **Headline** (700, `clamp(26px, 2.6vw, 34px)`, 1): encabezados de sección y título de la ficha destacada.
 - **Title** (600, 19px, 1.2): rol en la trayectoria y títulos de ficha.
 - **Body** (400, 16.5px, 1.6, 62ch máx.): descripciones y párrafos; el ancho se limita por columna, no por pantalla.
-- **Label** (400, 12.5px, tabular): años, roles y stacks en las especificaciones; pies de figura a 11,5px.
+- **Label** (400, 12.5px, tabular): años, roles y stacks en las especificaciones; pies de figura a 12px.
 
 ### Named Rules
 **La regla del dato alineado.** Todo número —años, conteos, fechas— se compone con cifras tabulares y se alinea en columna.
