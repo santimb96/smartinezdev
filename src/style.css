@@ -74,6 +74,7 @@ img, svg { display: block; max-width: 100%; height: auto; }
 
 .sheet {
 	margin-left: var(--rail);
+	margin-right: auto;
 	max-width: var(--measure);
 	padding: 0 var(--gut) 0 var(--gut);
 }
@@ -731,6 +732,11 @@ img, svg { display: block; max-width: 100%; height: auto; }
 
 @media (min-width: 1024px) {
 	.rail { display: block; }
+	.sheet {
+		/* Centra la hoja en el espacio que queda a la derecha del rail sin
+		   invadirlo cuando el viewport todavía no alcanza el ancho máximo. */
+		margin-left: max(var(--rail), calc(50% + var(--rail) / 2 - var(--measure) / 2));
+	}
 }
 
 @media (max-width: 1023px) {
