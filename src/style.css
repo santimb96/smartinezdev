@@ -10,8 +10,8 @@
 @font-face {
 	font-family: 'Archivo';
 	src: url('./assets/fonts/Archivo.woff2') format('woff2');
-	font-weight: 100 900;
-	font-stretch: 62% 125%;
+	font-weight: 400 700;
+	font-stretch: 100% 105%;
 	font-display: swap;
 }
 
