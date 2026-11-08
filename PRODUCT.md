@@ -32,7 +32,7 @@ Nombre: Santiago Martínez / SmartinezDev. Voz actual: directa, breve, con un to
 
 ## Evidence on Hand
 
-Capturas de los 7 proyectos en `public/img/projects/` (la de Docmark es un placeholder que no representa el producto). Logos de empresas en `public/img/companies/` (Pixind a 32×32). Retrato en `public/img/linkedinPic.webp`. CV en `public/documents/cv_santiago_martinez.pdf`. Perfiles: `github.com/santimb96` y `linkedin.com/in/santi-martinez-bota`. Proyectos con sitio vivo: Ressò, TMDB, clon de Spotify y Palmimax. No hay testimonios, métricas de negocio ni casos de estudio escritos, y no deben fabricarse.
+Capturas de los 7 proyectos en `src/assets/img/projects/` (la de Docmark es un placeholder que no representa el producto). Logos de empresas en `src/assets/img/companies/` (Pixind a 32×32). Retrato en `src/assets/img/linkedinPic.webp`. CV en `public/documents/cv_santiago_martinez.pdf`. Tarjeta social en `public/img/og-card.png`, generada desde `design/og-card.html`. Perfiles: `github.com/santimb96` y `linkedin.com/in/santi-martinez-bota`. Proyectos con sitio vivo: Ressò, TMDB, clon de Spotify y Palmimax. No hay testimonios, métricas de negocio ni casos de estudio escritos, y no deben fabricarse.
 
 ## Product Principles
 

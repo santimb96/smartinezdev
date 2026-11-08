@@ -40,6 +40,12 @@ const inlineStylesheet = () => {
 // https://vitejs.dev/config/
 export default defineConfig({
   publicDir: 'public',
+  // Keep every imported asset as a fingerprinted file. The company logos are
+  // under the 4 KiB default inline limit, and inlining them duplicated their
+  // base64 in both the prerendered HTML (uncached) and the entry chunk.
+  build: {
+    assetsInlineLimit: 0
+  },
   plugins: [
     preact({
       prerender: {
