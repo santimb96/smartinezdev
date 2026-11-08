@@ -1,0 +1,38 @@
+# Santiago Martínez — Desarrollador full-stack
+
+> Portfolio profesional de Santiago Martínez (SmartinezDev): desarrollador full-stack y de interfaces en Mallorca, España. 5 años de experiencia, 7 proyectos y 4 equipos entre 2021 y 2026.
+
+Sitio en español, de una sola página, con perfil, proyectos, trayectoria y contacto. Construido con Preact, Vite y Tailwind CSS, prerenderizado a HTML estático.
+
+## Perfil
+
+- [Perfil y disponibilidad](https://smartinezdev.com/#perfil): nombre, rol, estado de disponibilidad y medida de la trayectoria.
+- [CV en PDF](https://smartinezdev.com/documents/cv_santiago_martinez.pdf): currículum descargable.
+- [Contacto](https://smartinezdev.com/#contacto): correo, LinkedIn y GitHub.
+
+## Proyectos
+
+- [Ressò · Centre d'entrenament](https://www.ressocentredentrenament.com): landing full-stack en Next.js para un centro de entrenamiento en Marratxí, Mallorca. En producción.
+- [Docmark](https://smartinezdev.com/#proyectos): herramienta documental para Horizon Europe en Atalis Funding. Proyecto de cliente, privado.
+- [TMDB movie app](https://tmdb-movie-app-santimb96.vercel.app/): buscador de películas y series con consumo de API REST. Prueba técnica.
+- [Clon de Spotify](https://music-project-wozzo-santimb96.vercel.app/list): reproductor de música en streaming con backend propio y almacenamiento en AWS S3.
+- [Scraping TV3/SX3](https://github.com/santimb96/sx3_content_scrapping): script de extracción de contenido multimedia en Python.
+- [PokeDuel](https://github.com/santimb96/pokeDuel-client): videojuego de combates por rondas, proyecto de final de grado.
+- [Palmimax](https://palmimax.netlify.app/): app de cine en local centrada en UX/UI, proyecto académico.
+
+## Trayectoria
+
+- [Pixind](https://smartinezdev.com/#trayectoria): desarrollador full-stack en aplicaciones web de deporte y alto rendimiento. Go, HTMX, PostgreSQL, Docker.
+- [Freelance](https://smartinezdev.com/#trayectoria): desarrollo full-stack para clientes. React, Next.js, Node.js, SQL, Vercel.
+- [Atalis Funding](https://smartinezdev.com/#trayectoria): desarrollador front-end y UX/UI para clientes de ciencia e investigación. Figma, React, Rails, PostgreSQL.
+- [Wozzo](https://smartinezdev.com/#trayectoria): desarrollador full-stack en prácticas. React, Express, MongoDB, AWS S3.
+
+## Contacto
+
+- [Correo](mailto:santiagomartinezbota@gmail.com): santiagomartinezbota@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/santi-martinez-bota/)
+- [GitHub](https://github.com/santimb96)
+
+## Uso
+
+Contenido público para indexación y respuesta por parte de asistentes. Se permite citar con atribución a smartinezdev.com.
