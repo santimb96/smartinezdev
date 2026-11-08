@@ -154,6 +154,8 @@ El ritmo vertical es constante: 72–128px entre bandas, 40px entre fichas, 22px
 
 Cada sección ancla con `scroll-margin-top: 88px` para no quedar debajo de la barra fija.
 
+En impresión la hoja pasa a papel blanco, sin rail, barra superior ni índice inferior, en una sola columna y con las URL de contacto y de cada proyecto visibles (`@media print`).
+
 ## Elevation & Depth
 
 No hay sombras. La profundidad se comunica con filetes de 1px, cambios de valor en el fondo de lámina y superposición en el orden de lectura. Ningún elemento flota: la hoja es plana por definición.

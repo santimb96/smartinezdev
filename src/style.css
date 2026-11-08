@@ -634,18 +634,25 @@ img, svg { display: block; max-width: 100%; height: auto; }
 	border-top: 1px solid var(--rule);
 }
 
-.contact-links a {
+.contact-links a,
+.contact-links button {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 12px;
 	padding: 14px 0;
+	width: 100%;
+	border: 0;
 	border-bottom: 1px solid var(--rule);
+	background: none;
 	font-size: 14px;
+	text-align: left;
+	cursor: pointer;
 	transition: color 0.15s ease, padding-left 0.15s ease;
 }
 
-.contact-links a:hover { color: var(--signal); padding-left: 6px; }
+.contact-links a:hover,
+.contact-links button:hover { color: var(--signal); padding-left: 6px; }
 .contact-links svg { width: 16px; height: 16px; flex: none; }
 
 /* ---------- pie ---------- */
@@ -764,4 +771,81 @@ section[id] { scroll-margin-top: 88px; }
 
 @media (min-width: 768px) {
 	.mobile-nav { display: none; }
+}
+
+/* ---------- impresión ---------- */
+
+@page { margin: 14mm; }
+
+@media print {
+	:root,
+	:root[data-theme="dark"] {
+		--paper: #FFFFFF;
+		--ink: #000000;
+		--ink-soft: #333333;
+		--rule: #9A9A9A;
+		--plate: #F2F2F2;
+		--signal: #17544A;
+		--signal-ink: #FFFFFF;
+	}
+
+	body {
+		background: var(--paper);
+		color: var(--ink);
+		font-size: 11pt;
+		padding: 0;
+	}
+
+	.rail,
+	.topbar,
+	.mobile-nav,
+	.skip-link,
+	.title-actions,
+	.copy-status,
+	.portrait,
+	.plate-media,
+	.spec-links,
+	.no-print { display: none !important; }
+
+	.sheet {
+		margin: 0 !important;
+		max-width: none;
+		padding: 0;
+	}
+
+	.title-block,
+	.plate,
+	.plate-featured,
+	.contact-grid,
+	.revision { grid-template-columns: minmax(0, 1fr); }
+
+	.title-block { padding: 0 0 28px; }
+
+	.title-name { font-size: 40pt; }
+
+	.band { padding-top: 24px; }
+
+	.plate,
+	.timeline-row { break-inside: avoid; }
+
+	.plate > div:last-child { order: -1; }
+
+	.plate { gap: 14px; }
+
+	.copy-mail {
+		border: 0;
+		padding: 0;
+		font-size: 12pt;
+	}
+
+	.copy-mail svg { display: none; }
+
+	.contact-links { border-top: 0; }
+
+	.contact-links a[href^="http"]::after,
+	.plate-title a::after {
+		content: " — " attr(href);
+		font-size: 8.5pt;
+		color: var(--ink-soft);
+	}
 }
