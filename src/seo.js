@@ -4,6 +4,10 @@ const SITE_URL = 'https://smartinezdev.com'
 const SITE_NAME = 'SmartinezDev'
 const AUTHOR_NAME = 'Santiago Martínez'
 const DEFAULT_IMAGE = `${SITE_URL}/img/linkedinPic.webp?v=1`
+const OG_IMAGE = `${SITE_URL}/img/og-card.png`
+const OG_IMAGE_ALT = 'Santiago Martínez, desarrollador full-stack y de interfaces'
+const OG_IMAGE_WIDTH = '1200'
+const OG_IMAGE_HEIGHT = '630'
 
 const BASE_KEYWORDS = [
   'Santiago Martínez',
@@ -113,7 +117,10 @@ const buildSeo = (path = '/') => {
   return {
     ...seo,
     url,
-    image: DEFAULT_IMAGE,
+    image: OG_IMAGE,
+    imageAlt: OG_IMAGE_ALT,
+    imageWidth: OG_IMAGE_WIDTH,
+    imageHeight: OG_IMAGE_HEIGHT,
     locale: 'es_ES',
     twitterCard: 'summary_large_image',
     siteName: SITE_NAME,
@@ -130,6 +137,9 @@ const buildHeadElements = (seo) => {
     createMetaEntry('og:title', seo.title, true),
     createMetaEntry('og:description', seo.description, true),
     createMetaEntry('og:image', seo.image, true),
+    createMetaEntry('og:image:width', seo.imageWidth, true),
+    createMetaEntry('og:image:height', seo.imageHeight, true),
+    createMetaEntry('og:image:alt', seo.imageAlt, true),
     createMetaEntry('og:url', seo.url, true),
     createMetaEntry('og:type', seo.type, true),
     createMetaEntry('og:locale', seo.locale, true),
@@ -138,6 +148,7 @@ const buildHeadElements = (seo) => {
     createMetaEntry('twitter:title', seo.title),
     createMetaEntry('twitter:description', seo.description),
     createMetaEntry('twitter:image', seo.image),
+    createMetaEntry('twitter:image:alt', seo.imageAlt),
     createLinkEntry('canonical', seo.url)
   ]
 
@@ -189,6 +200,9 @@ const applyHeadOnClient = (seo) => {
   upsertMeta('meta[property="og:title"]', { property: 'og:title', content: seo.title })
   upsertMeta('meta[property="og:description"]', { property: 'og:description', content: seo.description })
   upsertMeta('meta[property="og:image"]', { property: 'og:image', content: seo.image })
+  upsertMeta('meta[property="og:image:width"]', { property: 'og:image:width', content: seo.imageWidth })
+  upsertMeta('meta[property="og:image:height"]', { property: 'og:image:height', content: seo.imageHeight })
+  upsertMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: seo.imageAlt })
   upsertMeta('meta[property="og:url"]', { property: 'og:url', content: seo.url })
   upsertMeta('meta[property="og:type"]', { property: 'og:type', content: seo.type })
   upsertMeta('meta[property="og:locale"]', { property: 'og:locale', content: seo.locale })
@@ -197,6 +211,7 @@ const applyHeadOnClient = (seo) => {
   upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: seo.title })
   upsertMeta('meta[name="twitter:description"]', { name: 'twitter:description', content: seo.description })
   upsertMeta('meta[name="twitter:image"]', { name: 'twitter:image', content: seo.image })
+  upsertMeta('meta[name="twitter:image:alt"]', { name: 'twitter:image:alt', content: seo.imageAlt })
   upsertLink('link[rel="canonical"]', { rel: 'canonical', href: seo.url })
 
   removeSchema()
