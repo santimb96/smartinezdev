@@ -13,7 +13,7 @@ const TitleBlock = ({ projectCount, teamCount }) => {
         <p className='title-role'>Desarrollador full-stack · Diseño de interfaces</p>
         <p className='title-state'>
           <span className='state-dot' aria-hidden='true' />
-          Disponible para entrevistas y proyectos · Mallorca
+          Disponible para entrevistas y proyectos · Mallorca · Remoto o híbrido
         </p>
 
         <div className='measure'>

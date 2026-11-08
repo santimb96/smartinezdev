@@ -18,12 +18,13 @@ const renderEmphasis = (text) => {
   return parts
 }
 
-const parseDate = (value) => {
-  const [year, month, day] = value.split('-').map(Number)
-  return new Date(year, month - 1, day)
-}
-
 const yearOf = (value) => value.split('-')[0]
+
+const statusOf = ({ deployment, repository }) => {
+  if (deployment) return 'En producción'
+  if (repository) return 'Repositorio público'
+  return 'Privado'
+}
 
 const sorted = [...PROJECTS].sort((a, b) => b.date.localeCompare(a.date))
 
@@ -36,7 +37,7 @@ const Work = () => {
       </div>
       <p className='lede'>
         Productos de clientes y proyectos propios, del más reciente al más antiguo.
-        Cada ficha incluye año, rol, stack y estado; los que están en producción se abren desde aquí.
+        Cada ficha incluye año, tipo, rol, stack y estado; los que están en producción se abren desde aquí.
       </p>
 
       <div style={{ marginTop: '40px' }}>
@@ -49,8 +50,7 @@ const Work = () => {
 }
 
 const Plate = ({ project, index, featured }) => {
-  const { name, area, date, img, deployment, repository, description, stack, caption } = project
-  const finished = new Date() > parseDate(date)
+  const { name, area, type, date, img, deployment, repository, description, stack, caption } = project
   const primaryLink = deployment || repository
   const image = (
     <img
@@ -91,8 +91,9 @@ const Plate = ({ project, index, featured }) => {
 
         <dl className='spec'>
           <div><dt>Rol</dt><dd>{area}</dd></div>
+          <div><dt>Tipo</dt><dd>{type}</dd></div>
           <div><dt>Stack</dt><dd>{stack.join(' · ')}</dd></div>
-          <div><dt>Estado</dt><dd>{finished ? 'Finalizado' : 'En curso'}</dd></div>
+          <div><dt>Estado</dt><dd>{statusOf(project)}</dd></div>
         </dl>
 
         {deployment || repository
