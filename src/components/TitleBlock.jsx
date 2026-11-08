@@ -1,5 +1,5 @@
 import { Mail, ArrowDownToLine } from 'lucide-preact'
-import linkedinPic from '../../public/img/linkedinPic.webp'
+import linkedinPic from '../assets/img/linkedinPic.webp'
 
 const START_YEAR = 2021
 const YEAR = new Date().getFullYear()

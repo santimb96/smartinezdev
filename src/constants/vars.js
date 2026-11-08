@@ -1,3 +1,15 @@
+import pixindLogo from '../assets/img/companies/pixind.webp'
+import freelanceLogo from '../assets/img/companies/freelance.webp'
+import atalisLogo from '../assets/img/companies/atalis_logo.webp'
+import wozzoLogo from '../assets/img/companies/wozzo_logo.webp'
+import ressoShot from '../assets/img/projects/resso-centre-entrenament.webp'
+import dummyShot from '../assets/img/projects/dummy.webp'
+import tmdbShot from '../assets/img/projects/tmdbApp.webp'
+import spoticloneShot from '../assets/img/projects/spoticlone.webp'
+import sx3Shot from '../assets/img/projects/sx3Scraping.webp'
+import pokeduelShot from '../assets/img/projects/pokeduel.webp'
+import palmimaxShot from '../assets/img/projects/palmimax.webp'
+
 const LINKS = [
   { link: '#perfil', title: 'Perfil' },
   { link: '#proyectos', title: 'Proyectos' },
@@ -8,7 +20,7 @@ const LINKS = [
 const EXPERIENCE = [
   {
     company: 'Pixind',
-    logo: '/img/companies/pixind.webp',
+    logo: pixindLogo,
     role: 'Desarrollador full-stack',
     date: 'actualmente',
     location: 'España',
@@ -17,7 +29,7 @@ const EXPERIENCE = [
   },
   {
     company: 'Freelance',
-    logo: '/img/companies/freelance.webp',
+    logo: freelanceLogo,
     role: 'Desarrollador full-stack',
     date: 'actualmente',
     location: 'España',
@@ -26,7 +38,7 @@ const EXPERIENCE = [
   },
   {
     company: 'Atalis Funding',
-    logo: '/img/companies/atalis_logo.webp',
+    logo: atalisLogo,
     role: 'Desarrollador front-end · UX/UI',
     date: 'abril de 2025',
     dateTime: '2025-04',
@@ -36,7 +48,7 @@ const EXPERIENCE = [
   },
   {
     company: 'Wozzo',
-    logo: '/img/companies/wozzo_logo.webp',
+    logo: wozzoLogo,
     role: 'Desarrollador full-stack',
     date: 'junio de 2022',
     dateTime: '2022-06',
@@ -53,7 +65,7 @@ const PROJECTS = [
     area: 'Full-stack',
     type: 'Cliente',
     date: '2025-06-11',
-    img: '/img/projects/resso-centre-entrenament.webp',
+    img: ressoShot,
     deployment: 'https://www.ressocentredentrenament.com',
     repository: 'https://github.com/santimb96/ressoo-centre-entrenament',
     description: 'Web para el centro <i>Ressò - Centre d\'entrenament</i>, en Marratxí (Palma de Mallorca): gimnasio, entrenos personales y seminarios. Desarrollada en Next.js para permitir escalado y migración de datos.',
@@ -65,7 +77,7 @@ const PROJECTS = [
     area: 'Full-stack',
     type: 'Cliente · Atalis Funding',
     date: '2025-04-11',
-    img: '/img/projects/dummy.webp',
+    img: dummyShot,
     deployment: null,
     repository: null,
     description: 'Aplicación para <i>Atalis Funding</i> que gestiona documentos de <i>Horizon Europe</i>: subrayado, organización jerárquica del contenido y cambios compartidos entre usuarios.',
@@ -77,7 +89,7 @@ const PROJECTS = [
     area: 'Front-end',
     type: 'Prueba técnica',
     date: '2023-03-11',
-    img: '/img/projects/tmdbApp.webp',
+    img: tmdbShot,
     deployment: 'https://tmdb-movie-app-santimb96.vercel.app/',
     repository: 'https://github.com/santimb96/tmdb-movie-app',
     description: 'Prueba técnica para <i>Atalis Funding</i>: búsqueda de series y películas, resultados paginados, favoritos e información detallada, con autenticación simulada en el navegador y consumo de API REST.',
@@ -89,7 +101,7 @@ const PROJECTS = [
     area: 'Full-stack',
     type: 'Prácticas',
     date: '2022-06-14',
-    img: '/img/projects/spoticlone.webp',
+    img: spoticloneShot,
     deployment: 'https://music-project-wozzo-santimb96.vercel.app/list',
     repository: 'https://github.com/santimb96/music-project-wozzo',
     description: 'Clon de <i>Spotify</i> con listas por temática y un reproductor escrito sin librerías externas. Las canciones viven en AWS S3 y el backend sirve todos los datos.',
@@ -101,7 +113,7 @@ const PROJECTS = [
     area: 'Script',
     type: 'Proyecto propio',
     date: '2022-10-14',
-    img: '/img/projects/sx3Scraping.webp',
+    img: sx3Shot,
     deployment: null,
     repository: 'https://github.com/santimb96/sx3_content_scrapping',
     description: 'Obtención de contenido multimedia mediante scraping del DOM y de la API de <i>TV3</i>, con almacenamiento local y registro de la ejecución.',
@@ -113,7 +125,7 @@ const PROJECTS = [
     area: 'Full-stack',
     type: 'Proyecto académico',
     date: '2022-07-14',
-    img: '/img/projects/pokeduel.webp',
+    img: pokeduelShot,
     deployment: null,
     repository: 'https://github.com/santimb96/pokeDuel-client',
     description: 'Proyecto de final de grado: videojuego de combates <i>Pokémon</i> por rondas, con hándicap de tipos y tabla de clasificación.',
@@ -125,7 +137,7 @@ const PROJECTS = [
     area: 'Front-end',
     type: 'Proyecto académico',
     date: '2021-11-14',
-    img: '/img/projects/palmimax.webp',
+    img: palmimaxShot,
     deployment: 'https://palmimax.netlify.app/',
     repository: 'https://github.com/santimb96/timeInn_p2',
     description: 'Proyecto trimestral: app de cine en local con películas y sesiones estáticas, centrada en la UX/UI y en una simulación de backend para preservar datos.',

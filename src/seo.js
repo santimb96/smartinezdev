@@ -1,9 +1,11 @@
 import { useEffect } from 'preact/hooks'
 
+import portrait from './assets/img/linkedinPic.webp'
+
 const SITE_URL = 'https://smartinezdev.com'
 const SITE_NAME = 'SmartinezDev'
 const AUTHOR_NAME = 'Santiago Martínez'
-const DEFAULT_IMAGE = `${SITE_URL}/img/linkedinPic.webp?v=1`
+const DEFAULT_IMAGE = `${SITE_URL}${portrait}`
 const OG_IMAGE = `${SITE_URL}/img/og-card.png`
 const OG_IMAGE_ALT = 'Santiago Martínez, desarrollador full-stack y de interfaces'
 const OG_IMAGE_WIDTH = '1200'
