@@ -13,7 +13,7 @@ Sitio en español, de una sola página, con perfil, proyectos, trayectoria y con
 ## Proyectos
 
 - [Catálogo IHF - Test reglas de juego](https://catalogoihf.netlify.app/): plataforma de estudio con el catálogo oficial de preguntas de las reglas de juego de balonmano; tests de 5/10/20/30 preguntas, pistas con las directrices citadas, estadísticas locales e informe PDF. Proyecto propio, en producción.
-- [Ressò · Centre d'entrenament](https://www.ressocentredentrenament.com): landing full-stack en Next.js para un centro de entrenamiento en Marratxí, Mallorca. En producción.
+- [Ressò · Centre d'entrenament](https://ressocentre.es): landing full-stack en Next.js para un centro de entrenamiento en Marratxí, Mallorca. En producción.
 - [Docmark](https://smartinezdev.com/#proyectos): herramienta documental para Horizon Europe en Atalis Funding. Proyecto de cliente, privado.
 - [TMDB movie app](https://tmdb-movie-app-santimb96.vercel.app/): buscador de películas y series con consumo de API REST. Prueba técnica.
 - [Clon de Spotify](https://music-project-wozzo-santimb96.vercel.app/list): reproductor de música en streaming con backend propio y almacenamiento en AWS S3.

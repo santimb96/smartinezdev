@@ -79,7 +79,7 @@ const PROJECTS = [
     type: 'Cliente',
     date: '2025-06-11',
     img: ressoShot,
-    deployment: 'https://www.ressocentredentrenament.com',
+    deployment: 'https://ressocentre.es',
     repository: 'https://github.com/santimb96/ressoo-centre-entrenament',
     description: 'Web para el centro <i>Ressò - Centre d\'entrenament</i>, en Marratxí (Palma de Mallorca): gimnasio, entrenos personales y seminarios. Desarrollada en Next.js para permitir escalado y migración de datos.',
     stack: ['Next.js', 'React', 'Tailwind CSS', 'CSS']
