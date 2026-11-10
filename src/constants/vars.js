@@ -9,6 +9,7 @@ import spoticloneShot from '../assets/img/projects/spoticlone.webp'
 import sx3Shot from '../assets/img/projects/sx3Scraping.webp'
 import pokeduelShot from '../assets/img/projects/pokeduel.webp'
 import palmimaxShot from '../assets/img/projects/palmimax.webp'
+import catalogoIhfShot from '../assets/img/projects/catalogo-ihf.webp'
 
 const LINKS = [
   { link: '#perfil', title: 'Perfil' },
@@ -59,6 +60,18 @@ const EXPERIENCE = [
 ]
 
 const PROJECTS = [
+  {
+    name: 'Catálogo IHF · Test reglas de juego',
+    caption: 'Tests de las reglas de juego de balonmano',
+    area: 'Front-end',
+    type: 'Proyecto propio',
+    date: '2026-11-08',
+    img: catalogoIhfShot,
+    deployment: 'https://catalogoihf.netlify.app',
+    repository: 'https://github.com/santimb96/ihf-rule-test',
+    description: 'Plataforma de estudio con el catálogo oficial de preguntas de las <i>Reglas de Juego</i> de la IHF: 432 preguntas con filtros por tema, tests de 5/10/20/30 preguntas, pistas con las directrices citadas, estadísticas locales e informe en PDF. Sin backend: todo se ejecuta en el navegador.',
+    stack: ['JavaScript', 'Vite', 'Tailwind CSS', 'jsPDF', 'localStorage']
+  },
   {
     name: 'Ressò · Centre d\'entrenament',
     caption: 'Landing del centro de entrenamiento',

@@ -45,7 +45,7 @@ test('entry script is still discovered in head', () => {
 // covers: prerender output not regressed
 test('prerendered content is intact', () => {
 	assert.equal((html.match(/<h1/g) ?? []).length, 1)
-	const titles = ['Ressò', 'Docmark', 'TMDB movie app', 'Scraping TV3/SX3', 'PokeDuel', 'Clon de Spotify', 'Palmimax']
+	const titles = ['Catálogo IHF', 'Ressò', 'Docmark', 'TMDB movie app', 'Scraping TV3/SX3', 'PokeDuel', 'Clon de Spotify', 'Palmimax']
 	for (const title of titles) {
 		assert.ok(html.includes(title), `missing project ${title}`)
 	}

@@ -24,7 +24,7 @@ El visitante llega desde LinkedIn, GitHub o un link enviado por un recruiter. Ev
 
 ## Capabilities and Constraints
 
-Contenido confirmado y existente: 7 proyectos (Ressò, Docmark, TMDB, scraper TV3/SX3, clon de Spotify, PokeDuel, Palmimax), 4 experiencias (Pixind, Freelance, Atalis Funding, Wozzo), CV en PDF, LinkedIn y GitHub. Sitio estático prerenderizado con Preact + Vite + Tailwind. El contenido está en español. El nombre profesional es "Santiago Martínez"; "Santi" no se usa en el título. Estado confirmado: disponible para entrevistas y proyectos.
+Contenido confirmado y existente: 8 proyectos (Catálogo IHF, Ressò, Docmark, TMDB, scraper TV3/SX3, clon de Spotify, PokeDuel, Palmimax), 4 experiencias (Pixind, Freelance, Atalis Funding, Wozzo), CV en PDF, LinkedIn y GitHub. Sitio estático prerenderizado con Preact + Vite + Tailwind. El contenido está en español. El nombre profesional es "Santiago Martínez"; "Santi" no se usa en el título. Estado confirmado: disponible para entrevistas y proyectos.
 
 ## Brand Commitments
 
@@ -32,7 +32,7 @@ Nombre: Santiago Martínez / SmartinezDev. Voz actual: directa, breve, con un to
 
 ## Evidence on Hand
 
-Capturas de los 7 proyectos en `src/assets/img/projects/` (la de Docmark es un placeholder que no representa el producto). Logos de empresas en `src/assets/img/companies/` (Pixind a 32×32). Retrato en `src/assets/img/linkedinPic.webp`. CV en `public/documents/cv_santiago_martinez.pdf`. Tarjeta social en `public/img/og-card.png`, generada desde `design/og-card.html`. Perfiles: `github.com/santimb96` y `linkedin.com/in/santi-martinez-bota`. Proyectos con sitio vivo: Ressò, TMDB, clon de Spotify y Palmimax. No hay testimonios, métricas de negocio ni casos de estudio escritos, y no deben fabricarse.
+Capturas de los 8 proyectos en `src/assets/img/projects/` (la de Docmark es un placeholder que no representa el producto). Logos de empresas en `src/assets/img/companies/` (Pixind a 32×32). Retrato en `src/assets/img/linkedinPic.webp`. CV en `public/documents/cv_santiago_martinez.pdf`. Tarjeta social en `public/img/og-card.png`, generada desde `design/og-card.html`. Perfiles: `github.com/santimb96` y `linkedin.com/in/santi-martinez-bota`. Proyectos con sitio vivo: Catálogo IHF, Ressò, TMDB, clon de Spotify y Palmimax. No hay testimonios, métricas de negocio ni casos de estudio escritos, y no deben fabricarse.
 
 ## Product Principles
 

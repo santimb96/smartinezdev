@@ -187,7 +187,7 @@ No hay sombras. La profundidad se comunica con filetes de 1px, cambios de valor 
 - **Mobile:** barra inferior de cinco celdas (cuatro secciones y el tema) a 11px, 52px de alto, con área segura inferior.
 
 ### Signature Component: la cota
-La cota es el elemento memorable: una línea de 1px con ticks verticales en los extremos, los años 2021 y 2026 debajo y la leyenda «5 años · 7 proyectos · 4 equipos» arriba. Mide hechos reales del producto; no es decoración.
+La cota es el elemento memorable: una línea de 1px con ticks verticales en los extremos, los años 2021 y 2026 debajo y la leyenda «5 años · 8 proyectos · 4 equipos» arriba. Mide hechos reales del producto; no es decoración.
 
 ### Signature Component: la ficha de especificación
 Cada proyecto es una fila con captura y tabla (`Rol`, `Stack`, `Estado`) separada por filetes. La fila 1 es más ancha y lleva el título a escala de headline; las demás comparten la misma grilla.
