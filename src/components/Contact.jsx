@@ -1,4 +1,4 @@
-import { Copy, CopyCheck, Mail, Github, ArrowDownToLine, Printer } from 'lucide-preact'
+import { Copy, CopyCheck, Mail, Github, ArrowDownToLine, Printer, Coffee } from 'lucide-preact'
 import { useEffect, useRef, useState } from 'preact/hooks'
 import LinkedInIcon from '../icons/LinkedInIcon.jsx'
 
@@ -87,6 +87,16 @@ const Contact = () => {
           <a className='no-print' href='/documents/cv_santiago_martinez.pdf' download='cv_santiago_martinez.pdf' aria-label='Descargar el CV en PDF'>
             CV en PDF
             <ArrowDownToLine size={16} strokeWidth={2} aria-hidden='true' />
+          </a>
+          <a
+            className='no-print'
+            href='https://ko-fi.com/smartinezdev'
+            target='_blank'
+            rel='noreferrer'
+            aria-label='Donar a Santiago Martínez en Ko-fi (se abre en una pestaña nueva)'
+          >
+            Invítame a un café
+            <Coffee size={16} strokeWidth={2} aria-hidden='true' />
           </a>
         </div>
       </div>

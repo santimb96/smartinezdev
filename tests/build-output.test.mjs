@@ -52,6 +52,15 @@ test('prerendered content is intact', () => {
 	assert.ok(html.includes('santiagomartinezbota@gmail.com'))
 })
 
+// covers: donation link (Ko-fi) is prerendered, external and hidden in print
+test('ko-fi donation link is prerendered safely', () => {
+	const match = html.match(/<a[^>]*href="https:\/\/ko-fi\.com\/smartinezdev"[^>]*>/)
+	assert.ok(match, 'missing Ko-fi donation link')
+	assert.match(match[0], /target="_blank"/)
+	assert.match(match[0], /rel="noreferrer"/)
+	assert.match(match[0], /class="[^"]*no-print/)
+})
+
 // covers: llms.txt audit (H1 + links, not the SPA HTML)
 test('llms.txt is a real markdown document with an H1 and links', () => {
 	const txt = read('llms.txt')
